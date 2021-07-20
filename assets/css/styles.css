@@ -9,13 +9,17 @@ text-decoration: none;
 color: inherit;
 }
 
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
 .no-disp {
   display: none !important;
 }
 
 .container {
-  margin-right: 68px;
-  margin-left: 68px;
+  margin-right: 5%;
+  margin-left: 5%;
 }
 
 .flex-box {
@@ -24,6 +28,14 @@ display: flex;
 
 .rotate180 {
   transform: rotate(180deg);
+}
+
+.normal-top {
+    margin-top: 80px;
+}
+
+.more-top {
+    margin-top: 120px;
 }
 
 /*
@@ -41,6 +53,7 @@ display: flex;
 .announcement-bar{
 background-color: #38493D;
 transition: .4s ease;
+justify-content: center;
 }
 
 .announcement-bar:hover {
@@ -75,6 +88,10 @@ transform: rotate(180deg);
   margin-bottom: -4px;
 }
 
+.header-wrapper {
+    background-color: #fff;
+}
+
 .header-content {
     padding: 16px 0;
     justify-content: space-between;
@@ -94,6 +111,7 @@ transform: rotate(180deg);
     justify-content: space-between;
     width: 40%;
     font-weight: 500;
+    min-width: 414px;
 }
 
 .header-right {
@@ -101,6 +119,7 @@ transform: rotate(180deg);
     width: 15%;
     position: relative;
     align-items: flex-end;
+    min-width: 200px;
 }
 
 .down-chevron {
@@ -147,13 +166,15 @@ transform: rotate(180deg);
     height: 17px;
 }
 
-.header-user-email {
+.header-user-login {
     position: absolute;
     background-color: #F1EEED;
     box-shadow: 0 8px 24px #0230490D;
     top: 30px;
     padding: 16px 16px 13px;
     border-radius: 4px;
+    right: -30px;
+    min-width: 225px;
 }
 
 .header-login-label {
@@ -170,6 +191,7 @@ transform: rotate(180deg);
     font-size: 13px;
     width: 204px;
     margin-bottom: 16px;
+    width: calc( 100% - 18px );
 }
 
 .header-forgot-password {
@@ -201,6 +223,362 @@ transform: rotate(180deg);
     margin-bottom: 8px;
 }
 
+.header-not-user {
+    font-size: 13px;
+}
+
+.header-signup-link {
+    color: #89B55D;
+}
+
+.header-cart {
+  cursor: pointer;
+}
+
+.header-cart-info {
+  position: absolute;
+    background-color: #F1EEED;
+    box-shadow: 0 8px 24px #0230490d;
+    top: 30px;
+    padding: 16px 16px 12px;
+    border-radius: 4px;
+    right: -8px;
+    min-width: 204px;
+    text-align: center;
+    font-size: 13px;
+}
+
+.header-cart-info-para {
+    margin-bottom: 8px;
+}
+
+.header-cart-info-btn {
+    padding: 16px 0 12px;
+    display: block;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #89B55D;
+    border-radius: 4px;
+}
+
+.more-height {
+    height: 120px;
+  }
+
 /*
 *****************************************************************************Header-End*****************************************************************************
+*/
+
+/*
+*****************************************************************************Shop-Page-Start*****************************************************************************
+*/
+
+.shop-menu-date-section.flex-box {
+    flex-direction: column;
+    align-items: center;
+    padding: 24px;
+    background-color: #F7FAF3;
+}
+
+.shop-menu-heading {
+    font-size: 32px;
+    font-family: 'Georgia';
+    margin-bottom: 16px;
+}
+
+.date-selector.flex-box {
+    margin-bottom: 16px;
+}
+
+.date-arrow {
+    cursor: pointer;
+}
+
+.date-arrow svg {
+  width: 20px;
+  height: 20px;
+}
+
+.date-arrow-left svg {
+    transform: rotate(180deg);
+}
+
+.date-text {
+    margin: 0 12px;
+    font-weight: 600;
+    line-height: 24px;
+}
+
+.dilivery-timings {
+    font-weight: 500;
+}
+
+.dilivery-check-link {
+    color: #89B55D;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.check-if-we-deliver {
+    background-color: #F1EEED;
+    padding: 16px 0;
+}
+
+.check-if-content {
+    justify-content: center;
+    align-items: center;
+    width: calc( 100vw - 10% );
+}
+
+.check-if-para {
+    line-height: 24px;
+    font-weight: 600;
+    margin-right: 36px;
+    width: 16%;
+    min-width: 196px;
+}
+
+.check-if-form {
+    width: 70%;
+}
+
+.check-if-input {
+    border: 1px solid #023049;
+    padding: 16px 16px 14px;
+    margin-right: 16px;
+    border-radius: 4px;
+    font-family: 'Sofia Pro';
+    width: 42%;
+}
+
+.check-if-input[type=number]{
+  max-width: 94px;
+}
+
+.check-if-submit-btn {
+    border: 1px solid #023049;
+    background-color: #38493D;
+    color: #fff;
+    font-family: 'Sofia Pro';
+    padding: 14px 0;
+    border-radius: 4px;
+    font-weight: 600;
+    width: 25.5%;
+    font-size: 16px;
+}
+
+.shop-collection-content {
+    margin-top: 40px;
+}
+
+.shop-collection-left {
+    width: 79%;
+}
+
+.shop-categories {
+    justify-content: space-between;
+    max-width: 825px;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.shop-categories-text {
+    font-weight: 600;
+    line-height: 24px;
+    margin-right: 20px;
+}
+
+.shop-category {
+    padding: 8px 16px 6px;
+    border: 1px solid #38493D;
+    border-radius: 4px;
+    font-weight: 500;
+    line-height: 24px;
+    transition: .4s ease;
+    cursor: pointer;
+}
+
+.shop-category.selected {
+  background-color: #38493D;
+  color: #fff;
+}
+
+.shop-collection-title {
+    font-size: 24px;
+    line-height: 32px;
+    font-family: 'Georgia';
+    margin-bottom: 24px;
+}
+
+.shop-collection-products {
+    flex-wrap: wrap;
+    margin: 0 -0.4%;
+}
+
+.shop-collection-product-card {
+    width: 32.5%;
+    background-color: #fff;
+    margin: 0 0.4%;
+}
+
+.shop-collection-product-card img {
+  width: 100%;
+  display: block;
+  height: 195px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+.product-info {
+    padding: 24px 16px;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 6px 20px #38493d1a;
+    margin-bottom: 24px;
+}
+
+.product-name {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    margin-bottom: 16px;
+}
+
+.product-weight-price {
+    justify-content: space-between;
+    font-weight: 500;
+    margin-bottom: 23px;
+}
+
+.product-category {
+    padding: 7px 12px 5px;
+    border: 1px solid;
+    border-radius: 4px;
+}
+
+.shop-collection-product-card .add-to-cart {
+    margin-top: 19px;
+    background-color: #89B55D;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: center;
+    padding: 16px 0 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: .4s ease;
+    margin-bottom: 16px;
+}
+
+.shop-collection-product-card .add-to-cart:hover {
+  background-color: #63963A;
+}
+
+.shop-collection-product-card .add-to-cart svg {
+  width: 16px;
+  height: 15px;
+  margin-right: 4px;
+}
+
+.product-cautions.flex-box {
+  justify-content: space-between;
+  text-decoration: underline;
+  cursor: pointer;
+  font-weight: 300;
+  line-height: 24px;
+}
+
+.caution {
+    position: relative;
+}
+
+.caution svg {
+  position: absolute;
+    right: -5px;
+    top: 2px;
+}
+
+
+/*
+*****************************************************************************Shop-Page-End*****************************************************************************
+*/
+
+
+/*
+*****************************************************************************Footer-Start*****************************************************************************
+*/
+
+.footer {
+    background-color: rgba(56, 73, 61, 0.2);
+}
+
+.footer-content {
+    padding-top: 80px;
+    padding-bottom: 40px;
+}
+
+.footer-flex {
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.footer-rose-mary-logo {
+    margin-bottom: 24px;
+    display: block;
+}
+
+.social-media-logos {
+    width: 40%;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.footer-languages {
+    font-size: 24px;
+    font-weight: 500;
+    justify-content: space-between;
+    width: 60%;
+    color: #38493D;
+}
+
+.footer-languages span {
+  cursor: pointer;
+}
+
+.footer-language-selected {
+    text-decoration: underline;
+}
+
+.footer-title {
+    font-family: 'Georgia', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.footer-link {
+    margin-bottom: 16px;
+    display: block;
+    transition: .4s ease;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+.footer-text {
+    margin-bottom: 16px;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+.footer-end-line {
+    justify-content: space-between;
+}
+
+/*
+*****************************************************************************Footer-End*****************************************************************************
 */
