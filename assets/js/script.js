@@ -79,3 +79,65 @@ $('.dilivery-check-link').click(function() {
     $('.check-if-we-deliver').addClass('no-disp');
   }
 });
+
+function fill_the_bar() {
+  var completed_loading = $('.loading-complete').data('complete');
+  $('.loading-complete').width(completed_loading+'%');
+}
+
+fill_the_bar();
+
+$('.qty-plus').click(function() {
+  var current_qty = parseInt($(this).prev().data('qty'));
+  updated_qty = current_qty + 1;
+  $(this).prev().data('qty', updated_qty);
+  $(this).prev().text(updated_qty);
+});
+
+$('.qty-minus').click(function() {
+  var current_qty = parseInt($(this).next().data('qty'));
+  updated_qty = current_qty - 1;
+  $(this).next().data('qty', updated_qty);
+  $(this).next().text(updated_qty);
+});
+
+let act = document.querySelectorAll(".accordion.active");
+  for(let j = 0; j < act.length; j++){
+    act[j].classList.remove("active");
+    act[j].nextElementSibling.style.maxHeight = null; //or 0px
+  }
+
+  var acc = document.getElementsByClassName("accordion");
+  var i;
+
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+
+      if($(this).hasClass('active')){
+        $(this).removeClass('active');
+      }
+
+      var panel = this.nextElementSibling;
+      if (panel.style.maxHeight){
+        panel.style.maxHeight = null;
+      } else {
+        let active = document.querySelectorAll(".accordion.active");
+        for(let j = 0; j < active.length; j++){
+          active[j].classList.remove("active");
+          active[j].nextElementSibling.style.maxHeight = null;
+        }
+        this.classList.toggle("active");
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      }
+    });
+  }
+
+  $('.check-box').click(function() {
+    $(this).toggleClass('selected');
+    if($(this).hasClass('selected')){
+      $(this).prev().prop("checked", true);
+    }
+    else {
+      $(this).prev().prop("checked", false);
+    }
+  });

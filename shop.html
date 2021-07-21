@@ -217,8 +217,33 @@ layout: default
     </div>
   </div>
   <div class="shop-collection-right">
-
+    {% include right-cart.html %}
   </div>
 </div>
+
+{% include faq.html %}
+
+{% include testimonial.html %}
+
+{% include instagram.html %}
+
+<div class="newsletter-signup-section">
+  <div class="newsletter-content container">
+    <h2 class="newsletter-heading">Schrijf je in on onze nieuwsbrief en ontvang 10% korting op je eerste bestelling</h2>
+    <p class="newsletter-text">Geen spam, wel als eerste het nieuwe menu in je mailbox</p>
+    <form class="newsletter-form" action="index.html" method="post">
+      <div class="newsletter-email flex-box">
+        <input class="check-if-input answer-email-input" type="email" name="" value="" placeholder="E-mailadres">
+        <input type="submit" class="check-if-submit-btn" name="" value="Inschrijven">
+      </div>
+      <div class="agreement-checkbox flex-box">
+        <input id="agreement" class="no-disp" type="checkbox" name="" value="agreed">
+        <span class="check-box"><span class="checked"></span></span>
+        <label class="agreement-label" for="agreement">Ik ga ermee akkoord dat mijn gegevens verwerkt worden conform de privacyverklaring</label>
+      </div>
+    </form>
+  </div>
+</div>
+
 
 </main>
