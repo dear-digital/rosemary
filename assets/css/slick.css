@@ -196,7 +196,8 @@
 
 .slick-prev
 {
-  left: -62px;
+  left: 0;
+  z-index: 2;
   -webkit-transform: rotateY(180deg) translate(0, -50%);
   -ms-transform: rotateY(180deg) translate(0, -50%);
   transform: rotateY(180deg) translate(0, -50%);
@@ -221,7 +222,7 @@
 
 .slick-next
 {
-  right: -62px;
+  right: 0;
 }
 [dir='rtl'] .slick-next
 {
@@ -524,6 +525,8 @@
 }
 
 .instagram-section .slick-list {
-  width: 90%;
+  /* width: 90%; */
     margin: 0 auto;
+    padding-right: 80px;
+    max-width: 994px;
 }

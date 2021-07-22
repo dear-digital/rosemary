@@ -17,8 +17,12 @@ layout: default
       <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"><defs><style>.a-icon-chevron-left-right{fill:#fff;}.a-icon-chevron-left-right,.b-icon-chevron-left-right{stroke:#152018;stroke-width:3px;}.b-icon-chevron-left-right,.d-icon-chevron-left-right{fill:none;}.b-icon-chevron-left-right{stroke-linecap:round;stroke-linejoin:round;}.c-icon-chevron-left-right{stroke:none;}</style></defs><g transform="translate(580 3726) rotate(180)"><g class="a-icon-chevron-left-right" transform="translate(580 3726) rotate(180)"><rect class="c-icon-chevron-left-right" width="48" height="48" rx="24"/><rect class="d-icon-chevron-left-right" x="1.5" y="1.5" width="45" height="45" rx="22.5"/></g><g transform="translate(560 3694) rotate(90)"><path class="b-icon-chevron-left-right" d="M7431,3152l8,8,4.666-4.667L7447,3152" transform="translate(-7431 -3152)"/></g></g></svg>
     </div>
   </div>
-  <div class="dilivery-timings">
+  <div class="dilivery-timings no-t-m">
     <span class="dilivery-timings-text">We leveren van maandag tot vrijdag tussen 15u30 en 20u30 - </span>
+    <span class="dilivery-check-link">Controleer of we tot bij jou leveren</span>
+  </div>
+  <div class="dilivery-timings no-d">
+    <div class="dilivery-timings-text">We leveren van maandag tot vrijdag tussen 15u30 en 20u30 </div>
     <span class="dilivery-check-link">Controleer of we tot bij jou leveren</span>
   </div>
 </div>
@@ -33,7 +37,7 @@ layout: default
   </div>
 </div>
 <div class="shop-collection-section">
-  <div id="sticky-menu" class="shop-collection-categories-sticky">
+  <div id="sticky-menu" class="shop-collection-categories-sticky no-t-m">
     <div class="container">
       <div class="shop-categories flex-box">
         <span class="shop-categories-text">Waar heb je goesting in?</span>
@@ -57,7 +61,7 @@ layout: default
   </div>
 <div class="shop-collection-content flex-box container">
   <div class="shop-collection-left">
-    <div class="shop-categories flex-box">
+    <div class="shop-categories flex-box no-t-m">
       <span class="shop-categories-text">Waar heb je goesting in?</span>
       <span class="shop-category selected">Alle gerechten</span>
       <span class="shop-category">Vlees</span>
@@ -65,6 +69,26 @@ layout: default
       <span class="shop-category">Gevogelte</span>
       <span class="shop-category">Veggie</span>
       <span class="shop-category">Vegan</span>
+    </div>
+    <div class="shop-categories no-d">
+      <div class="accordion">
+        <span class="shop-categories-text">Waar heb je goesting in?</span>
+        <span class="down-chevron">
+          <svg class="icon-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+              <g>
+                <path d="m 21.365632,3.8463214 27.760611,-0.1607933 0.08747,-27.6872871 8.12143,-0.09916 -0.107135,35.888216 -35.940265,0.107799 z" transform="matrix(0.70421428,0.7099875,-0.70421428,0.7099875,0,0)"></path>
+              </g>
+          </svg>
+        </span>
+      </div>
+      <div class="panel">
+        <span class="shop-category">Alle gerechten</span>
+        <span class="shop-category">Vlees</span>
+        <span class="shop-category">Vis</span>
+        <span class="shop-category">Gevogelte</span>
+        <span class="shop-category">Veggie</span>
+        <span class="shop-category">Vegan</span>
+      </div>
     </div>
 
     <div class="shop-collection">
@@ -240,10 +264,53 @@ layout: default
 
       </div>
     </div>
+    <div class="menu-drawer-cart no-d">
+      <div class="menu-drawer-mini-cart">
+        <div class="your-order-text-section flex-box">
+          <div class="your-order-text-part flex-box">
+            <div class="your-order-cart-svg">
+              <svg class="header-cart-svg" xmlns="http://www.w3.org/2000/svg" width="23.5" height="22.75" viewBox="0 0 23.5 22.75"><defs><style>.a-icon-shopping-cart-green,.b-icon-shopping-cart-green{fill:none;stroke:#38493d;stroke-linecap:round;stroke-linejoin:round;}.a-icon-shopping-cart-green{stroke-width:2px;}.b-icon-shopping-cart-green{stroke-width:1.5px;}</style></defs><g transform="translate(-0.25 -0.25)"><circle class="a-icon-shopping-cart-green" cx="1" cy="1" r="1" transform="translate(8 20)"/><circle class="a-icon-shopping-cart-green" cx="1" cy="1" r="1" transform="translate(19 20)"/><path class="b-icon-shopping-cart-green" d="M1,1H5L7.68,14.39a2,2,0,0,0,2,1.61H19.4a2,2,0,0,0,2-1.61L23,6H6"/></g></svg>
+            </div>
+            <div class="your-order-text">
+              Uw bestelling
+            </div>
+          </div>
+          <div class="text-separator-pipe">
+            |
+          </div>
+          <div class="your-order-text-part flex-box">
+            3 gerechten
+          </div>
+          <div class="text-separator-pipe">
+            |
+          </div>
+          <div class="your-order-text-part flex-box">
+            <div class="your-order-text cart-total">
+              € 36,00
+            </div>
+            <div class="up-chevron">
+              <svg class="icon-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+                  <g>
+                    <path d="m 21.365632,3.8463214 27.760611,-0.1607933 0.08747,-27.6872871 8.12143,-0.09916 -0.107135,35.888216 -35.940265,0.107799 z" transform="matrix(0.70421428,0.7099875,-0.70421428,0.7099875,0,0)"></path>
+                  </g>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <a href="#" class="mini-cart-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="23.5" height="22.75" viewBox="0 0 23.5 22.75"><defs><style>.a-icon-shopping-cart,.b-icon-shopping-cart{fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;}.a-icon-shopping-cart{stroke-width:2px;}.b-icon-shopping-cart{stroke-width:1.5px;}</style></defs><g transform="translate(-0.25 -0.25)"><circle class="a-icon-shopping-cart" cx="1" cy="1" r="1" transform="translate(8 20)"/><circle class="a-icon-shopping-cart" cx="1" cy="1" r="1" transform="translate(19 20)"/><path class="b-icon-shopping-cart" d="M1,1H5L7.68,14.39a2,2,0,0,0,2,1.61H19.4a2,2,0,0,0,2-1.61L23,6H6"/></g></svg>
+          BESTELLEN
+        </a>
+      </div>
+    </div>
+    <div class="shop-collection-right no-disp no-d">
+      {% include right-cart.html %}
+    </div>
   </div>
-  <div class="shop-collection-right">
+  <div class="shop-collection-right no-t-m">
     {% include right-cart.html %}
   </div>
+
 </div>
 </div>
 

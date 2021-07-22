@@ -38,7 +38,7 @@ $(document).ready(function(){
 
   $('.instagram-images').slick({
     infinite: true,
-    slidesToShow: 3.5,
+    slidesToShow: 3,
     slidesToScroll: 1,
     dots: false,
     arrows: true,
