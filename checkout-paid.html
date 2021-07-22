@@ -1,0 +1,347 @@
+---
+layout: default
+---
+<style>
+  * {
+      outline: 0!important;
+      box-sizing: border-box;
+  }
+  body.no-scroll {
+    overflow: hidden;
+  }
+  .justify-content-between {
+    justify-content: space-between;
+  }
+  .padd-top {
+    padding-top: 80px;
+  }
+  .padd-bottoom {
+    padding-bottom: 80px;
+  }
+  .marg-top {
+    margin-top: 80px;
+  }
+  .marg-bottom {
+    margin-bottom: 80px;
+  }
+  .default-btn {
+    box-shadow: 0px 0px 24px #38493D1A;
+    border-radius: 4px;
+    background-color: var(--light-green-color);
+    min-width: 204px;
+    padding: 0 12px;
+    min-height: 43px;
+    border: 0;
+    color: var(--background-main-color);
+    font-family: var(--main-font);
+    font-weight: 700;
+    cursor: pointer;
+  }
+  .default-btn:hover {
+    background-color: var(--light-green-hover-color);
+  }
+  .btn-gray {
+    background-color: var(--leaf-green-color);
+  }
+  .btn-gray:hover {
+    background-color: var(--leaf-green-dark-color);
+  }
+  .s_two_col.reverse-cols .scols-parent .col-img {
+    order: 2;
+  }
+
+  .s_two_col.reverse-cols .scols-parent .col-text {
+    order: 1;
+    border-radius: 8px 0 0 8px !important;
+  }
+
+  .col.col-img {
+    width: 58%;
+    padding: 0;
+    align-self: center;
+    flex-basis: auto;
+    flex-grow: unset;
+  }
+
+  .col.col-img img {
+    width: 100%;
+    border-radius: 8px;
+    display: block;
+  }
+
+  .col.col-text {
+    width: 42%;
+    display: -webkit-box; display: -webkit-flex; display: flex;
+    align-items: center;
+    background-color: var(--background-color);
+    padding: 80px 40px;
+    margin: 23px 0;
+    border-radius: 0 8px 8px 0;
+    flex-basis: auto;
+    flex-grow: unset;
+  }
+
+  .col.col-text p, .col.col-text li {
+    font-weight: 300;
+  }
+
+  h1, h2, h3, h4, h5, h6,
+  .h1, .h2, .h3, .h4, .h5, .h6 {
+    margin-bottom: 24px;
+    font-family: var(--heading-font);
+    font-weight: 700;
+    font-size: 24px;
+    color: var(--main-color);
+  }
+  p, li {
+    line-height: 24px;
+  }
+
+  .popup-wrapper {
+    z-index: 2000;
+    position: absolute;
+    background-color: #1520187a;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .popup {
+    width: 95%;
+    max-width: 754px;
+    background-color: var(--background-main-color);
+    padding: 118px 40px;
+    border-radius: 8px;
+    position: relative;
+}
+.popup-text {
+    max-width: 470px;
+    text-align: center;
+    margin: 0 auto;
+}
+.popup-text p {
+  font-weight: 300;
+}
+.popup-text ul {
+    max-width: 300px;
+    text-align: left;
+    margin: 0 auto;
+    margin-top: 24px;
+    margin-bottom: 40px;
+    list-style: none;
+}
+.popup-text ul li{
+  position: relative;
+  font-size: 13px;
+  color: var(--leaf-green-color);
+  font-weight: 500;
+}
+.popup-text ul li::before {
+    content: "";
+    background-image: url(/assets/imgs/Small-check-circle.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 4px;
+    left: -25px;
+    z-index: 1;
+}
+.popup-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+.popup-close.popup-close-bottom {
+    position: relative;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    right: auto;
+    left: auto;
+}
+.popup-close svg {
+    width: 10px;
+}
+.popup-close.popup-close-bottom svg {
+  width: 18px;
+  height: 18px;
+  padding: 3px;
+  margin: 0 10px;
+  border: 2px solid;
+  border-radius: 50%;
+}
+
+input.form-input {
+  display: block;
+  width: 100%;
+  max-width: 314px;
+  height: 43px;
+  border: 1px solid #023049;
+  border-radius: 4px;
+  padding-left: 40px;
+  padding-right: 20px;
+  margin: 16px 0;
+  font-family: 'Sofia Pro';
+  color: var(--leaf-green-color);
+  font-family: var(--main-font);
+}
+
+input.form-input::placeholder {
+    opacity: .7;
+}
+input.form-input:-ms-input-placeholder {
+    opacity: .7;
+}
+input.form-input::-ms-input-placeholder {
+    opacity: .7;
+}
+.input-wrapper {
+  position: relative;
+}
+.input-wrapper.icon-mail::before {
+    content: "";
+    background-image: url(/assets/imgs/email.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 12.8px;
+    position: absolute;
+    top: 16px;
+    left: 10px;
+    z-index: 1;
+}
+.checkbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  margin-top: 16px;
+  cursor: pointer;
+  max-width: 311px;
+  line-height: 16px;
+  color: #606D64;
+}
+.checkbox-1 {
+    width: 42px;
+    height: 32px
+}
+.checkbox .svg-check-b {
+    stroke: transparent
+}
+.check .svg-check-b {
+    stroke: var(--leaf-green-color)
+}
+.no-check .svg-check-a {
+    stroke: var(--leaf-green-color)
+}
+
+
+@media (min-width: 993px) {
+    .no-d {
+        display:none!important
+    }
+  }
+  @media (max-width: 992px) {
+    .no-m {
+        display:none!important
+    }
+    .popup {
+        width: 100%;
+        margin: 0 16px;
+        padding: 40px 16px;
+    }
+
+    .popup-text p{
+      text-align: left;
+    }
+    .popup-text ul {
+        max-width: 300px;
+        text-align: left;
+        margin: 0;
+        margin-top: 24px;
+        margin-bottom: 40px;
+        list-style: none;
+        padding-left: 25px;
+    }
+    .s_two_col .scols-parent {
+        flex-wrap: wrap;
+    }
+    .s_two_col.reverse-cols .scols-parent .col-img {
+        order: 1;
+    }
+    .col.col-img, .col.col-text {
+        width: 100%;
+    }
+    .s_two_col.reverse-cols .scols-parent .col-text,.s_two_col .scols-parent .col-text {
+      margin: 0;
+      margin-top: -10px;
+      border-radius: 8px 8px 8px 8px !important;
+      padding: 32px 10px;
+    }
+  }
+</style>
+
+
+
+<main class="main normal-top" role="main">
+
+  {% include popup.html %}
+
+  <div class="s_two_col reverse-cols padd-top marg-bottom">
+    <div class="container">
+      <div class="flex-box justify-content-between scols-parent">
+        <div class="col col-img">
+          <img src="/assets/imgs/foodimage.png" alt="food">
+        </div>
+        <div class="col col-text">
+          <div class="col-text-control">
+            <h2>Bedankt voor je bestelling!</h2>
+            <p>Blijf je graag op de hoogte van onze nieuwe gerechten, handige serveertips en interessante kortingen?</p>
+            <div class="form-mail">
+              <span class="input-wrapper icon-mail">
+                <input class="form-input" type="email" placeholder="E-mailadres">
+              </span>
+              <button class="default-btn btn-gray">Inschrijven</button>
+                <div class="checkbox">
+                  <div class="checkbox-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" style="width: 22px;"><defs><style>.svg-check-a{fill:#fff;}.svg-check-a,.svg-check-b{stroke:var(--leaf-green-color);stroke-width:2px;}.svg-check-b,.svg-check-d{fill:none;}.svg-check-b{stroke-linecap:round;stroke-linejoin:round;}.svg-check-c{stroke:none;}</style></defs><g class="svg-check-a"><rect class="svg-check-c" width="32" height="32"></rect><rect class="svg-check-d" x="1" y="1" width="30" height="30"></rect></g><path class="svg-check-b" d="M2279.346,1602.008v6.359h11.607" transform="translate(-2735.032 494.658) rotate(-45)"></path></svg>
+                  </div>
+                  <div class="checkbox-2">
+                    By clicking send you give permission for the use of your email address.
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% include instagram.html %}
+
+</main>
+
+<script>
+  //dom ready handler
+  jQuery(function ($) {
+    $('.checkbox').click(function(){
+      	$(".checkbox").removeClass("no-check");
+    	$(".checkbox").toggleClass("check");
+    });
+    //form submit handler
+    $('form').submit(function (e) {
+      //check atleat 1 checkbox is checked
+      if (!$(".checkbox").hasClass('check')) {
+        //prevent the default form submit if it is not checked
+        e.preventDefault();
+      	$(".checkbox").addClass("no-check");
+      }
+    })
+  })
+</script>

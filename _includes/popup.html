@@ -1,0 +1,28 @@
+<div class="popup-wrapper">
+  <div class="popup">
+    <div class="popup-close no-m">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22.629" height="22.629" viewBox="0 0 22.629 22.629"><defs><style>.svg-close{fill:none;stroke:#152018;stroke-linecap:round;stroke-linejoin:round;stroke-width:4px;}</style></defs><g transform="translate(-133.642 -559.322) rotate(45)"><line class="svg-close" y2="24" transform="translate(506 289)"></line><line class="svg-close" x2="24" transform="translate(494 301.002)"></line></g></svg>
+    </div>
+    <div class="popup-text">
+      <h2>Bedankt voor je bestelling!</h2>
+      <p>De volgende keer sneller een bestelling plaatsen?<br> Registreer je en geniet van deze voordelen:</p>
+      <ul>
+        <li>Naam en adres vooraf ingevuld</li>
+        <li>Een handig overzicht van je bestellingen</li>
+        <li>Gratis levering bij je eerstvolgende bestelling</li>
+      </ul>
+      <button class="default-btn">Registreren</button>
+    </div>
+    <div class="popup-close popup-close-bottom no-d">
+      Sluiten <svg xmlns="http://www.w3.org/2000/svg" width="22.629" height="22.629" viewBox="0 0 22.629 22.629"><defs><style>.svg-close{fill:none;stroke:#152018;stroke-linecap:round;stroke-linejoin:round;stroke-width:4px;}</style></defs><g transform="translate(-133.642 -559.322) rotate(45)"><line class="svg-close" y2="24" transform="translate(506 289)"></line><line class="svg-close" x2="24" transform="translate(494 301.002)"></line></g></svg>
+    </div>
+  </div>
+</div>
+
+<script>
+  $('body').addClass('no-scroll');
+  $('.popup-close').click( function(){
+    $(this).closest('.popup-wrapper').hide();
+    $('body').removeClass('no-scroll');
+  });
+</script>
