@@ -4,6 +4,8 @@ layout: default
 
 <main class="main normal-top" role="main">
 
+
+
 <div class="shop-menu-date-section flex-box">
   <h1 class="shop-menu-heading">Menu</h1>
   <div class="date-selector flex-box">
@@ -30,6 +32,29 @@ layout: default
     </form>
   </div>
 </div>
+<div class="shop-collection-section">
+  <div id="sticky-menu" class="shop-collection-categories-sticky">
+    <div class="container">
+      <div class="shop-categories flex-box">
+        <span class="shop-categories-text">Waar heb je goesting in?</span>
+        <span class="shop-category selected">Alle gerechten</span>
+        <span class="shop-category">Vlees</span>
+        <span class="shop-category">Vis</span>
+        <span class="shop-category">Gevogelte</span>
+        <span class="shop-category">Veggie</span>
+        <span class="shop-category">Vegan</span>
+      </div>
+      <div class="menu-type-titles">
+        <span class="menu-type dark">Hoofdgerechten</span>
+        <span class="menu-type">-</span>
+        <span class="menu-type">Menu's</span>
+        <span class="menu-type">-</span>
+        <span class="menu-type">Apero & soep</span>
+        <span class="menu-type">-</span>
+        <span class="menu-type">Desserts</span>
+      </div>
+    </div>
+  </div>
 <div class="shop-collection-content flex-box container">
   <div class="shop-collection-left">
     <div class="shop-categories flex-box">
@@ -219,6 +244,7 @@ layout: default
   <div class="shop-collection-right">
     {% include right-cart.html %}
   </div>
+</div>
 </div>
 
 {% include faq.html %}

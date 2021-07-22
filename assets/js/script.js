@@ -141,3 +141,15 @@ let act = document.querySelectorAll(".accordion.active");
       $(this).prev().prop("checked", false);
     }
   });
+
+  var myMenu = document.getElementById("sticky-menu");
+
+      window.onscroll = function() {scrollFunction()};
+
+      function scrollFunction() {
+        if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
+          myMenu.style.display = "block";
+        } else {
+          myMenu.style.display = "none";
+        }
+      }
