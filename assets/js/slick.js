@@ -28,7 +28,23 @@ $(document).ready(function(){
     arrows: true,
     responsive: [
       {
-        breakpoint: 560,
+        breakpoint: 992,
+        settings: {
+          arrows: false
+        }
+      }
+    ]
+  });
+
+  $('.product-imgs').slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: true,
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 992,
         settings: {
           arrows: false
         }
@@ -44,7 +60,7 @@ $(document).ready(function(){
     arrows: true,
     responsive: [
       {
-        breakpoint: 560,
+        breakpoint: 992,
         settings: {
           arrows: false
         }

@@ -306,6 +306,7 @@
   border: 0;
   outline: none;
   background: transparent;
+  transition: .4s ease;
 }
 .slick-dots li button:hover,
 .slick-dots li button:focus
@@ -327,8 +328,8 @@
   top: 0;
   left: 0;
 
-  width: 12px;
-  height: 12px;
+  width: 8px;
+  height: 8px;
 
   content: '';
   text-align: center;
@@ -338,7 +339,8 @@
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #B6DFE3;
+  background-color: #fff;
+    border: 2px solid;
   transition: all .4s ease;
   border-radius: 50%;
 }
@@ -367,13 +369,17 @@
 .slick-dots li.slick-active button
 {
   width: 12px !important;
+  margin-top: 2px;
 }
 .slick-dots li.slick-active button:before
 {
   opacity: 1;
   color: white;
+  height: 12px;
   width: 12px !important;
-  background-color: #1E2D51;
+  border: 2px solid;
+  background-color: #38493D;
+  /* transition: .4s ease; */
 }
 .slider-for {
   margin-bottom: 16px;
@@ -416,67 +422,16 @@
   transform: none !important;
 }
 
-
-.homepage-product-carousel .slick-prev,.homepage-product-carousel  .slick-next {
-  top: calc( 100% - 24px );
-  background-color: transparent;
-}
-.homepage-product-carousel .slick-prev:hover,.homepage-product-carousel  .slick-next:hover {
-  background-color: #1E2D51;
-}
-.homepage-product-carousel .slick-next {
-  right: 35%;
-}
-.homepage-product-carousel .slick-prev {
-  left: 35%;
-}
-.homepage-product-carousel .slick-dots {
-  bottom: 40px;
-}
-.testimonial-carousel .slick-dots {
-  bottom: 0;
-}
-.upsell .slick-prev,.upsell .slick-next {
-  width: 32px;
-  height: 32px;
+.product-imgs {
+    visibility: hidden;
 }
 
-.plan-cheese-slick .slick-prev {
-  left: -10%;
+.product-imgs.slick-initialized {
+    visibility: visible;
 }
 
-.plan-cheese-slick .slick-next {
-  right: -10%;
-}
 
-.plan-cheese-slick .slick-next, .plan-cheese-slick .slick-prev {
-  background-color: #E6AA68;
-  border: none;
-  z-index: 2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
-.plan-cheese-slick .slick-dots li.slick-active button:before {
-  background-color: #E6AA68;
-}
-
-.plan-cheese-slick .slick-dots li button:before {
-  background-color: #fff;
-}
-
-.plan-cheese-slick .slick-dots {
-  bottom: 0;
-}
-
-.complete-your-evening-content .plan-cheese-slick .slick-dots li button:before {
-  background-color: #46536233;
-}
-
-.complete-your-evening-content .plan-cheese-slick .slick-dots li.slick-active button:before {
-  background-color: #e6aa68;
-}
 
 
 
@@ -529,4 +484,10 @@
     margin: 0 auto;
     padding-right: 80px;
     max-width: 994px;
+}
+
+.product-imgs img {
+  border-radius: 8px;
+    object-fit: cover;
+    height: 33vw;
 }
