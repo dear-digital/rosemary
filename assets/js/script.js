@@ -81,8 +81,10 @@ $('.dilivery-check-link').click(function() {
 });
 
 function fill_the_bar() {
-  var completed_loading = $('.loading-complete').data('complete');
-  $('.loading-complete').width(completed_loading+'%');
+  $('.loading-complete').each(function() {
+    var completed_loading = $(this).data('complete');
+    $(this).width(completed_loading+'%');
+  });
 }
 
 fill_the_bar();
