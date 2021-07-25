@@ -759,6 +759,7 @@ transform: rotate(180deg);
     cursor: pointer;
     transition: .4s ease;
     margin-bottom: 16px;
+    width: 100%;
 }
 
 .shop-collection-product-card .add-to-cart:hover {
@@ -1751,6 +1752,157 @@ transform: rotate(180deg);
 *****************************************************************************Product-Page-End*****************************************************************************
 */
 
+/*
+*****************************************************************************Blog-Start*****************************************************************************
+*/
+
+.blog-page {
+  padding-top: 64px;
+}
+
+.blog-content-with-hero-img {
+    position: relative;
+}
+
+.blog-hero-img img {
+  width: 100%;
+}
+
+.blog-content {
+    padding: 40px 40px 56px;
+    width: 70%;
+    background-color: var(--background-color);
+    border-radius: 8px;
+    position: absolute;
+    top: 340px;
+    left: 15%;
+}
+
+.blog-content-height {
+margin-bottom: -60px;
+}
+
+.blog-date-author {
+    justify-content: space-between;
+    line-height: var(--px24);
+    font-weight: 300;
+    margin-bottom: var(--px24);
+}
+
+.blog-title {
+    font-size: var(--px32);
+    line-height: 40px;
+    margin-bottom: var(--px24);
+}
+
+.blog-subtitle {
+    font-size: var(--px24);
+    line-height: var(--px32);
+    font-weight: 300;
+    margin-bottom: 40px;
+}
+
+.blog-intertitle {
+    line-height: var(--px24);
+    font-weight: 600;
+    margin-bottom: var(--px24);
+}
+
+.blog-para {
+    font-weight: 300;
+    margin-bottom: var(--px24);
+}
+
+.blog-img img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.blog-content .blog-img {
+    margin-bottom: 40px;
+}
+
+.blog-imgs {
+    justify-content: space-between;
+}
+
+.blog-imgs .blog-img {
+    width: 49%;
+}
+
+.right-chevron {
+    display: inline-block;
+    transform: rotate(-90deg);
+    margin-left: var(--px4);
+}
+
+.blog-next-prev {
+    width: 70%;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-bottom: 39px;
+}
+
+.blog-next-btn, .blog-prev-btn {
+  cursor: pointer;
+}
+
+.prev-text, .next-text {
+  transition: .4s ease;
+}
+
+.prev-text:hover, .next-text:hover {
+  text-decoration: underline;
+}
+
+.all-articles-btn {
+    line-height: var(--px24);
+    padding: var(--px16) 0 var(--px12);
+    border: 1px solid #023049;
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+    width: 15%;
+    margin: 0 auto;
+    transition: .4s ease;
+    margin-bottom: 80px;
+    font-weight: 600;
+}
+
+.all-articles-btn:hover {
+  background-color: var(--hover-grey-color);
+}
+
+.craving-heading {
+    font-size: var(--px32);
+    line-height: 40px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.blog-page .see-all-dishes-btn{
+  margin-bottom: 91px;
+}
+
+.back-share-btns {
+    flex-direction: column;
+    align-items: center;
+    width: 15%;
+}
+
+.blog-page-back-to-top {
+    position: sticky;
+    bottom: 100px;
+    transform: rotate(-90deg);
+    cursor: pointer;
+    display: inline-block;
+    margin-left: 90%;
+}
+
+/*
+*****************************************************************************Blog-End*****************************************************************************
+*/
 
 /*
 *****************************************************************************Footer-Start*****************************************************************************
@@ -2199,6 +2351,243 @@ padding-top: 6px;
   margin-top: -10px;
   border-radius: 8px 8px 8px 8px !important;
   padding: 32px 10px;
+}
+
+.product-img-info-section {
+    margin-bottom: 32px;
+    flex-direction: column;
+}
+
+.product-img-section, .product-info-section {
+    width: 100%;
+}
+
+.product-info-section {
+    margin-top: 32px;
+}
+
+.product-properties {
+    margin-bottom: var(--px8);
+    flex-wrap: wrap;
+}
+
+.product-property {
+    margin-bottom: var(--px8);
+}
+
+.product-page-btns {
+    width: 100%;
+    flex-wrap: wrap;
+    margin-bottom: var(--px24);
+}
+
+.product-page-btns .add-to-cart {
+    width: 100%;
+    margin-bottom: var(--px16);
+}
+
+.cont-shopping {
+    width: 100%;
+}
+
+.this-week-popular-heading {
+    font-size: var(--px24);
+}
+
+.this-week-popular-dishes {
+    flex-wrap: wrap;
+}
+
+.this-week-popular-section .shop-collection-product-card {
+    width: 48%;
+}
+
+.see-all-dishes-btn {
+    width: 100%;
+}
+
+.review-block {
+    flex-direction: column;
+    margin-bottom: var(--px24);
+}
+
+.review-left {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 16px;
+}
+
+.review-right {
+    width: 100%;
+}
+
+.review-percentage {
+    margin-bottom: 0;
+}
+
+.num-of-review-filter {
+    justify-content: space-between;
+    margin-bottom: var(--px24);
+}
+
+.review-filter {
+  color: var(--leaf-green-color);
+}
+
+.review-filter .down-chevron {
+  position: unset;
+}
+
+.review-percentage-text {
+    font-size: 12px;
+}
+
+.review-writer {
+    font-size: var(--px16);
+    line-height: var(--px24);
+    margin-bottom: 10px;
+}
+
+.varified-buyer {
+    line-height: var(--px16);
+    font-size: 12px;
+    padding-bottom: var(--px8);
+}
+
+.rating-time {
+    line-height: var(--px16);
+    font-size: var(--px12);
+}
+
+.rating-and-time {
+    margin-bottom: var(--px24);
+}
+
+.review-title {
+    font-size: var(--px16);
+    line-height: var(--px24);
+    margin-bottom: 10px;
+}
+
+.review-text {
+    margin-bottom: 38px;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.review-load-more {
+    text-decoration: none;
+}
+
+.review-section {
+    margin-bottom: 48px;
+}
+
+.newsletter-signup-section {
+    padding: 64px 0;
+}
+
+.newsletter-content {
+    width: 100%;
+}
+
+.newsletter-heading {
+    margin-bottom: 23px;
+}
+
+.newsletter-text {
+    margin-bottom: var(--px24);
+}
+
+.newsletter-email {
+    flex-wrap: wrap;
+}
+
+.newsletter-content .answer-email-input {
+    width: 100%;
+    margin-bottom: var(--px16);
+    margin-right: 0;
+}
+
+.newsletter-content .check-if-submit-btn {
+    width: 100%;
+}
+
+.blog-content {
+    padding: 0;
+    width: 100%;
+    background-color: transparent;
+    position: unset;
+    left: 0;
+}
+
+.back-btn {
+    padding-top: 40px;
+    width: 83px;
+    line-height: var(--px24);
+    font-weight: 600;
+}
+
+.blog-hero-img {
+    margin-bottom: var(--px16);
+}
+
+.blog-title {
+    font-size: var(--px24);
+    line-height: var(--px32);
+    margin-bottom: var(--px8);
+}
+
+.blog-subtitle {
+    font-size: var(--px16);
+    line-height: var(--px24);
+    font-weight: 500;
+    margin-bottom: var(--px16);
+}
+
+.blog-intertitle {
+    margin-bottom: var(--px16);
+}
+
+.blog-content .blog-img {
+    margin-bottom: var(--px24);
+}
+
+.back-share-btns {
+    flex-direction: initial;
+    width: 100%;
+}
+
+.share-on-fb {
+    align-items: center;
+}
+
+.share-on-fb-text {
+    margin-left: 8px;
+    font-weight: 300;
+    line-height: var(--px24);
+}
+
+.blog-next-prev {
+    width: 100%;
+    font-weight: 300;
+    text-decoration: underline;
+}
+
+.all-articles-btn {
+    width: 100%;
+    margin-bottom: 64px;
+}
+
+.craving-heading {
+    font-size: var(--px24);
+    line-height: var(--px32);
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.blog-page .see-all-dishes-btn {
+    margin-bottom: 64px;
 }
 
 }
