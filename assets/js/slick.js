@@ -30,6 +30,22 @@ $(document).ready(function(){
       {
         breakpoint: 992,
         settings: {
+          dots: true
+        }
+      }
+    ]
+  });
+
+  $('.date-selector').slick({
+    infinite: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: false,
+    arrows: true,
+    responsive: [
+      {
+        breakpoint: 992,
+        settings: {
           arrows: false
         }
       }
@@ -52,6 +68,22 @@ $(document).ready(function(){
     ]
   });
 
+  $('.home-page-slick').slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: true,
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 992,
+        settings: {
+          dots: false
+        }
+      }
+    ]
+  });
+
   $('.instagram-images').slick({
     infinite: true,
     slidesToShow: 3,
@@ -62,7 +94,8 @@ $(document).ready(function(){
       {
         breakpoint: 992,
         settings: {
-          arrows: false
+          arrows: false,
+          slidesToShow: 1
         }
       }
     ]
@@ -112,6 +145,18 @@ $(document).ready(function(){
     arrows: true,
     dots: true
   });
+
+  $('.date-selector').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+  console.log(nextSlide);
+  if(nextSlide == 1) {
+    $(".announcement-bar-text").addClass('new-content');
+    $(".announcement-bar").addClass('new-color');
+  }
+  else {
+    $(".announcement-bar-text").removeClass('new-content');
+    $(".announcement-bar").removeClass('new-color');
+  }
+});
 
   //   $('.upsell').slick({
   //     infinite: false,

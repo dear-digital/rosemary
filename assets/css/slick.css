@@ -149,6 +149,28 @@
   padding: 0;
   /* border: 3px solid #152018; */
 }
+
+.date-selector .slick-prev, .date-selector .slick-next {
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border: 1px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.date-selector .slick-prev {
+  left: 35%;
+  margin-left: 10px;
+}
+
+.date-selector .slick-next {
+  right: 35%;
+  margin-right: 10px;
+}
+
 .black-box .slick-prev,
 .black-box .slick-next {
   border: 2px solid #fff;
@@ -169,6 +191,13 @@
 {
   opacity: 1;
   content: url("/assets/icons/Arrow in cirkle.svg") !important;
+}
+
+.date-selector .slick-prev:hover:before,
+.date-selector .slick-next:hover:before
+{
+  opacity: 1;
+  content: url("/assets/icons/icon-left-chevron.svg")!important;
 }
 .product-info-left .slick-prev:hover:before,
 .product-info-left .slick-next:hover:before
@@ -211,6 +240,28 @@
 {
   content: url("/assets/icons/Arrow in cirkle.svg");
 }
+
+.date-selector .slick-prev:before
+{
+  content: url("/assets/icons/icon-left-chevron.svg");
+  display: inline-block;
+    transform: rotate(-90deg);
+    padding: 8px;
+    border: 1px solid;
+    border-radius: 50%;
+}
+
+.date-selector .slick-next:before
+{
+  content: url("/assets/icons/icon-left-chevron.svg");
+  display: inline-block;
+    transform: rotate(-90deg);
+    padding-right: 2px;
+    border: 1px solid;
+    border-radius: 50%;
+
+}
+
 .product-info-left .slick-prev:before
 {
   content: url("/assets/icons/Arrow in cirkle.svg");

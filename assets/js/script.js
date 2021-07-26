@@ -193,3 +193,11 @@ let act = document.querySelectorAll(".accordion.active");
         }
 
       });
+
+      $('.date-selector .slick-next').click(function() {
+        console.log('next');
+        if($('.date-selector #next-week').hasClass("current-slick")){
+          $(".announcement-bar-text").addClass('new-content');
+          $(".announcement-bar").addClass('new-color');
+        }
+      });

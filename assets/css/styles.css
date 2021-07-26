@@ -46,6 +46,79 @@ body.no-scroll {
 .marg-bottom {
   margin-bottom: 80px;
 }
+
+.col.col-text {
+  padding: 40px;
+}
+.default-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn-white {
+  background-color: #FFFFFF;
+  color: #152018;
+}
+.input-two-col {
+    display: flex;
+    justify-content: space-between;
+}
+input.form-input-col {
+    padding: 0 20px;
+}
+.form-input-col:first-child {
+    width: 25%;
+}
+.form-input-col:last-child {
+    width: 70%;
+}
+.btn-white:hover {
+  background-color: #AFB6B1;
+}
+.padd-top-sm {
+  padding-top: 52px;
+}
+.marg-top-xs {
+  margin-top: 32px;
+}
+.text-center {
+  text-align: center;
+}
+.justify-content-around {
+  justify-content: space-around;
+}
+.scols-3-parent {
+  position: relative;
+}
+.col-3-1 {
+    text-align: center;
+    width: 340px;
+    padding: 0 12px;
+}
+.col-3-1 .img-wrapper {
+  height: 160px;
+  width: 160px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 6px 18px #0230491a;
+  border-radius: 50%;
+  background-color: #fff;
+  cursor: pointer;
+}
+.col-3-1 h2 {
+    font-family: var(--main-font);
+}
+.col-3-1 p {
+  margin-bottom: 16px;
+}
+.col-3-1 a {
+    font-weight: 300;
+    line-height: 24px;
+    text-decoration: underline;
+}
+
 body {
 margin: 0;
 font-family: var(--main-font);
@@ -557,12 +630,128 @@ transform: rotate(180deg);
 */
 
 /*
+*****************************************************************************Home-Start*****************************************************************************
+*/
+
+span.bike-line {
+  position: absolute;
+  height: 4px;
+  width: 0;
+  background-color: #38493D;
+  border-radius: 4px;
+  left: 15.5%;
+  top: 124px;
+  z-index: -1;
+}
+.scols-3-parent:hover .bike-line {
+  animation: load 5s infinite;
+}
+.bike-line svg {
+  position: absolute;
+  right: 0;
+  top: -30px;
+}
+.scols-3-parent:hover .bike-line svg:first-child {
+  animation: toggle-1 5s infinite;
+  top: -28px;
+}
+.scols-3-parent:hover .bike-line svg:last-child {
+  animation: toggle-2 5s infinite;
+}
+
+.home-hero-flex {
+  align-items: center;
+}
+
+.home-page .home-page-slick, .home-page .home-page-slick-text {
+  width: 50%;
+}
+
+.home-page .home-page-slick-text {
+  padding: 64px 40px;
+  height: fit-content;
+    margin: 0;
+    margin-bottom: 29px;
+}
+
+.home-page-discover-dishes-btn {
+    padding: 16px 0 12px;
+    display: block;
+    margin-top: 37px;
+    background-color: var(--light-green-color);
+    text-align: center;
+    color: #fff;
+    box-shadow: 0px 0px 24px #38493d1a;
+    border-radius: 4px;
+    width: 216px;
+    transition: .4s ease;
+}
+
+.home-page-discover-dishes-btn:hover {
+  background-color: var(--light-green-hover-color);
+}
+
+.home-page .craving-section {
+  margin-bottom: 89px;
+}
+
+.home-page .how-it-works {
+  background-color: var(--background-light-color);
+  padding-bottom: 104px;
+  z-index: -1;
+}
+
+.home-page span.bike-line {
+  z-index: 0;
+}
+
+.home-page .col-3-1 {
+  z-index: 1;
+}
+
+.home-page .col.col-text {
+  padding: 40px;
+  margin: 0;
+}
+
+.home-page .col-text-btns .default-btn {
+  background-color: var(--leaf-green-color);
+  transition: .4s ease;
+}
+
+.home-page .col-text-btns .default-btn:hover {
+  background-color: var(--leaf-green-dark-color);
+}
+
+.home-page .col-text-btns .btn-white {
+  border-radius: 4px;
+    min-width: 204px;
+    padding: 0 12px;
+    min-height: 43px;
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #023049;
+    transition: .4s ease;
+    margin-left: 24px;
+}
+
+.home-page .scols-parent{
+  align-items: center;
+}
+
+
+/*
+*****************************************************************************Home_End*****************************************************************************
+*/
+
+/*
 *****************************************************************************Shop-Page-Start*****************************************************************************
 */
 
-.shop-menu-date-section.flex-box {
-    flex-direction: column;
-    align-items: center;
+.shop-menu-date-section {
+    text-align: center;
     padding: var(--px24);
     background-color: var(--background-light-color);
 }
@@ -573,7 +762,7 @@ transform: rotate(180deg);
     margin-bottom: 16px;
 }
 
-.date-selector.flex-box {
+.date-selector {
     margin-bottom: 16px;
 }
 
@@ -1251,6 +1440,18 @@ transform: rotate(180deg);
 
 .menu-type.dark {
     opacity: 1;
+}
+
+.new-content span {
+  display: none;
+}
+
+.new-content:after {
+  content: 'Leverbaar vanaf 19 juli 15u30';
+}
+
+.new-color {
+  background-color: var(--red-color);
 }
 
 
@@ -1982,6 +2183,52 @@ margin-bottom: -60px;
 *****************************************************************************Footer-End*****************************************************************************
 */
 
+@keyframes load {
+  0% {
+    width: 0;
+  }
+
+  50% {
+    width: 35%;
+  }
+
+  100% {
+    width: 69%;
+  }
+}
+@keyframes toggle-1 {
+  0% {
+    height: 30px;
+  }
+
+  50% {
+    height: 30px;
+  }
+  51% {
+    height: 1px;
+  }
+
+  100% {
+    height: 1px;
+  }
+}
+@keyframes toggle-2 {
+  0% {
+    height: 0;
+  }
+
+  50% {
+    height: 0;
+  }
+  51% {
+    height: 30px;
+  }
+
+  100% {
+    height: 30px;
+  }
+}
+
 @media (min-width: 993px) {
   .no-d {
     display: none !important;
@@ -2206,6 +2453,21 @@ padding-top: 6px;
 .footer-content {
     padding-top: 64px;
     padding-bottom: 64px;
+}
+
+.scols-3-parent {
+    flex-wrap: wrap;
+}
+span.bike-line {
+    display: none;
+}
+.col-3-1 {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 48px;
+}
+.col-3-1 p {
+  font-weight: 300;
 }
 
 .shop-menu-heading {
@@ -2588,6 +2850,116 @@ padding-top: 6px;
 
 .blog-page .see-all-dishes-btn {
     margin-bottom: 64px;
+}
+
+.home-hero-flex h2, .home-hero-flex p {
+  margin-bottom: 16px;
+}
+
+.home-page-discover-dishes-btn {
+  color: var(--main-color);
+  background-color: transparent;
+  font-weight: 300;
+  text-decoration: underline;
+  padding: 0;
+  display: initial;
+    box-shadow: none;
+}
+
+.home-hero-flex .right-chevron {
+  margin-left: 0;
+}
+
+.home-page .craving-dishes {
+    flex-wrap: wrap;
+}
+
+.home-page .s_two_col{
+  margin-bottom: 32px;
+  padding-top: 32px;
+}
+
+.home-page .craving-section {
+    margin-bottom: 40px;
+}
+
+.home-page .marg-bottom {
+    margin-bottom: 64px;
+}
+
+.home-page .col-text-btns {
+    flex-direction: column;
+}
+
+.home-page .col-text-btns .btn-white {
+  margin-left: 0;
+  margin-top: 16px;
+}
+
+.home-page .col-text-control h2, .home-page .col-text-control p {
+  margin-bottom: 16px;
+}
+
+.home-page .col-text-btns .default-btn {
+  margin-top: 0;
+}
+
+.faq-content {
+    width: 100%;
+}
+
+.answer .check-if-content {
+    align-items: unset;
+    flex-direction: column;
+}
+
+.check-if-form {
+    width: 100%;
+}
+
+.check-if-input[type=number] {
+    max-width: unset;
+    width: 30%;
+    margin-right: 4%;
+}
+
+.answer .check-if-input[type=email] {
+    width: 65%;
+}
+
+.check-if-input {
+    margin-right: 0;
+}
+
+.check-if-para {
+  margin-bottom: 8px;
+}
+
+.check-if-submit-btn {
+    display: block;
+    width: 100%;
+    margin-top: 8px;
+}
+
+.check-if-input.check-if-second-email {
+  width: 100%;
+  left: 0;
+  padding-left: 10%;
+}
+
+.faq-section {
+    padding: 64px 0;
+    margin-bottom: 64px;
+}
+
+.testimonial-heading {
+    font-size: var(--px24);
+    margin-bottom: var(--px32);
+}
+
+.testimonial-btn {
+    width: 100%;
+    margin-top: 70px;
 }
 
 }
