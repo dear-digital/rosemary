@@ -2106,6 +2106,417 @@ margin-bottom: -60px;
 */
 
 /*
+*****************************************************************************Our-Story-Start*****************************************************************************
+*/
+
+.our-story-page {
+  padding-top: 64px;
+}
+
+.our-story-page .scols-parent {
+  align-items: center;
+}
+
+.our-story-page .col.col-text {
+  padding: 40px;
+  margin: 0;
+}
+
+.our-story-page .marg-bottom {
+  margin-bottom: 120px;
+}
+
+.our-story-page .col-text-btns .default-btn {
+    background-color: var(--leaf-green-color);
+    transition: .4s ease;
+}
+
+.our-story-page .col-text-btns .default-btn:hover {
+  background-color: var(--leaf-green-dark-color);
+}
+
+.our-story-page .col-text-btns .btn-white {
+    border-radius: 4px;
+    min-width: 204px;
+    padding: 0 12px;
+    min-height: 43px;
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #023049;
+    transition: .4s ease;
+    margin-left: 24px;
+    font-weight: 600;
+}
+
+.marg-top-med {
+  margin-top: 24px;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.our-blogs {
+    background-color: var(--background-light-color);
+    padding: 80px 0;
+    margin-bottom: 80px;
+}
+
+.our-blogs-heading {
+    font-size: var(--px32);
+    line-height: 40px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.our-blogs .col.col-text {
+  background-color: var(--background-main-color);
+}
+
+.our-blogs .scols-parent .default-btn {
+    background-color: var(--leaf-green-color);
+    transition: .4s ease;
+}
+
+.our-blogs .scols-parent .default-btn:hover {
+  background-color: var(--leaf-green-dark-color);
+}
+
+.our-story-page .our-blogs .marg-bottom {
+    margin-bottom: 64px;
+}
+
+.our-blogs .shop-collection-products {
+    margin: 0 -0.5%;
+    margin-bottom: 40px;
+}
+
+.our-blogs .shop-collection-product-card {
+    width: 24%;
+    margin: 0 0.5%;
+}
+
+.our-blogs .product-info {
+    padding: 16px;
+}
+
+.our-blogs .blog-date-author {
+  line-height: var(--px16);
+  font-weight: 500;
+  font-size: 13px;
+  margin-bottom: var(--px16);
+}
+
+.blog-card-text {
+    font-weight: 300;
+    margin-bottom: 16px;
+}
+
+.our-blogs .read-further {
+  text-decoration: underline;
+  font-weight: 300;
+}
+
+.our-blogs .read-further .right-chevron {
+  margin-bottom: var(--px4);
+}
+
+.our-blogs .load-more {
+  margin: 0 auto;
+  width: 85px;
+    font-weight: 300;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.our-story-page .craving-section {
+  margin-bottom: 131px;
+}
+
+
+/*
+*****************************************************************************Our-Story-End*****************************************************************************
+*/
+
+/*
+*****************************************************************************Contact-Start*****************************************************************************
+*/
+
+.contact-page {
+  padding-top: 64px;
+}
+
+.contact-page .col-text .default-btn {
+  background-color: var(--leaf-green-color);
+  transition: .4s ease;
+}
+
+.contact-page .col-text .default-btn:hover {
+  background-color: var(--leaf-green-dark-color);
+}
+
+.contact-page .col.col-img{
+  padding: 40px 55px;
+  background-color: var(--background-main-color);
+  box-shadow: 0 6px 20px #38493d1a;
+    border-radius: 8px;
+}
+
+.contact-page .half-size-inputs {
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact-page .half-width {
+    width: 48%;
+}
+
+.contact-page label {
+  display: block;
+  /* margin-bottom: 4px; */
+  line-height: var(--px24);
+  font-weight: 500;
+}
+
+.contact-page input {
+  padding: 16px;
+  margin-bottom: var(--px24);
+  width: 100%;
+  border: 1px solid;
+    border-radius: 4px;
+    font-family: var(--main-font);
+    font-weight: 500;
+    font-size: var(--px16);
+}
+
+.contact-page .contact-form .accordion {
+    padding: var(--px16);
+    border: 1px solid var(--leaf-green-color);
+    border-radius: var(--px4);
+    position: relative;
+    background-color: #fff;
+}
+
+.contact-page .contact-form .accordion .down-chevron {
+    right: var(--px16);
+    top: 37%;
+    position: absolute;
+}
+
+.contact-page .contact-form .panel-open {
+    padding: var(--px16);
+    border: 1px solid var(--leaf-green-color);
+    border-radius: var(--px4);
+    margin-top: var(--px4);
+    background-color: #fff;
+}
+
+.contact-page .panel .shop-category {
+    border: none;
+    display: block;
+}
+
+.contact-page textarea {
+  padding: 16px;
+  margin-bottom: var(--px24);
+  width: 100%;
+  border: 1px solid;
+    border-radius: 4px;
+    font-family: var(--main-font);
+    font-weight: 500;
+    font-size: var(--px16);
+    resize: none;
+}
+
+.contact-page .checkbox {
+    margin-top: 0;
+    max-width: 560px;
+    margin-bottom: var(--px32);
+}
+
+.contact-page .contact-form input[type=submit]{
+  width: 30%;
+  transition: .4s ease;
+  margin: 0 auto;
+    display: block;
+}
+
+.contact-page .scols-parent {
+  align-items: center;
+}
+
+.contact-page .reverse-cols{
+  margin-bottom: 151px;
+}
+
+.contact-page .check-if-submit-btn {
+    width: 25.5%;
+}
+
+.i-have-question-about {
+    font-weight: 600;
+    margin-bottom: var(--px16);
+}
+
+.contact-faq-sub-heading {
+    font-family: var(--font-main);
+    margin-bottom: 40px;
+}
+
+.contact-page .faq-section .shop-categories {
+  margin-bottom: 40px;
+}
+
+.contact-faq-sub-section {
+    margin-bottom: 40px;
+}
+
+.contact-page .craving-section {
+  margin-bottom: 131px;
+}
+
+/*
+*****************************************************************************Contact-End*****************************************************************************
+*/
+
+/*
+*****************************************************************************Register-Start*****************************************************************************
+*/
+
+.register-page {
+    padding-top: 40px;
+}
+
+.register-content {
+    background-color: var(--background-light-color);
+    padding: 40px 100px;
+    box-shadow: 0 6px 20px #38493d1a;
+    border-radius: 8px;
+    margin-bottom: 80px;
+}
+
+.register-heading {
+    font-size: var(--px32);
+    line-height: 40px;
+    margin-bottom: 40px;
+}
+
+.credentials {
+    font-weight: 600;
+    margin-bottom: var(--px16);
+}
+
+.register-left {
+    width: 80%;
+}
+
+.half-size-inputs {
+    justify-content: space-between;
+}
+
+.register-form label {
+  display: block;
+  margin-bottom: 4px;
+    font-weight: 500;
+}
+
+.register-form input {
+  width: 100%;
+  padding: var(--px16);
+    border: 1px solid;
+    border-radius: 4px;
+    font-family: var(--main-font);
+    font-size: var(--px16);
+    line-height: 20px;
+    margin-bottom: var(--px16);
+}
+
+.password-terms {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: var(--px16);
+    margin-top: -8px;
+    color: #606D64;
+}
+
+.register-form .half-width {
+    width: 48%;
+}
+
+.register-form .radio-label {
+  display: inline-block;
+  margin-right: 32px;
+  font-weight: 500;
+    margin-bottom: var(--px24);
+}
+
+.radio-span {
+  padding: 0px 8px;
+  background-color: #fff;
+  border: 1px solid;
+  border-radius: 50%;
+  position: relative;
+  margin-right: 16px;
+  cursor: pointer;
+}
+
+.selected .selected-radio {
+    width: 12px;
+    background-color: var(--main-color);
+    height: 12px;
+    position: absolute;
+    border-radius: 50%;
+    left: 2px;
+    top: 2px;
+}
+
+.house-number {
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.one-third {
+    width: 31%;
+}
+
+.register-form .checkbox {
+    max-width: 311px;
+    color: var(--main-color);
+    font-size: var(--px16);
+    font-weight: 500;
+    justify-content: unset;
+    margin-bottom: var(--px24);
+}
+
+.register-right {
+    width: 20%;
+    position: relative;
+}
+
+.register-btn {
+    padding: 16px 0 12px;
+    text-align: center;
+    background-color: var(--inactive-light-color);
+    border-radius: 4px;
+    color: #fff;
+    font-weight: 600;
+    line-height: var(--px19);
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    transition: .4s ease;
+    cursor: pointer;
+}
+
+
+
+/*
+*****************************************************************************Register-End*****************************************************************************
+*/
+
+/*
 *****************************************************************************Footer-Start*****************************************************************************
 */
 
@@ -2489,6 +2900,7 @@ span.bike-line {
     border: 1px solid var(--leaf-green-color);
     border-radius: var(--px4);
     position: relative;
+    background-color: #fff;
 }
 
 .shop-categories .accordion .down-chevron {
@@ -2506,6 +2918,7 @@ span.bike-line {
     border: 1px solid var(--leaf-green-color);
     border-radius: var(--px4);
     margin-top: var(--px4);
+    background-color: #fff;
 }
 
 .shop-categories-text {
@@ -2961,5 +3374,132 @@ span.bike-line {
     width: 100%;
     margin-top: 70px;
 }
+
+.our-story-page {
+    padding-top: 32px;
+}
+
+.our-story-page .s_two_col.reverse-cols .scols-parent .col-text, .our-story-page .s_two_col .scols-parent .col-text {
+  padding: 16px;
+}
+
+.our-story-page .default-btn {
+    width: 100%;
+}
+
+.our-story-page .marg-bottom {
+    margin-bottom: 60px;
+}
+
+.col-text-btns {
+    flex-direction: column;
+}
+
+.our-story-page .marg-top-xs {
+    margin-top: 16px;
+}
+
+.our-story-page .col-text-btns .btn-white {
+    margin-left: 0;
+}
+
+.our-blogs {
+    padding: 64px 0;
+    margin-bottom: 64px;
+}
+
+.our-blogs .shop-collection-product-card {
+    width: 49%;
+    margin-bottom: 24px;
+}
+
+.our-blogs .product-info {
+    margin-bottom: 0;
+}
+
+.contact-page {
+    padding-top: 32px;
+}
+
+.contact-page .col.col-text {
+  display: block;
+}
+
+.contact-page .col-text .default-btn {
+  width: 100%;
+}
+
+.contact-page .col.col-img {
+    padding: 40px 10px;
+    margin-top: 32px;
+}
+
+.contact-page .half-width {
+    width: 100%;
+}
+
+.contact-page .contact-form input[type=submit] {
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+.contact-page .reverse-cols {
+    margin-bottom: 80px;
+}
+
+.contact-page .check-if-submit-btn {
+    width: 100%;
+}
+
+.contact-page .answer .check-if-input {
+  margin-bottom: 0;
+}
+
+.contact-page .check-if-input.check-if-second-email {
+  width: 100%;
+}
+
+.contact-page .faq-btn {
+  width: 100%;
+}
+
+.contact-page .craving-section {
+    margin-bottom: 64px;
+}
+
+.register-page {
+  padding-top: var(--px32);
+}
+
+.register-flex {
+    flex-direction: column;
+}
+
+.register-content {
+  padding: var(--px32) 20px;
+}
+
+.register-form .half-size-inputs {
+  flex-wrap: wrap;
+}
+
+.register-form .half-width {
+  width: 100%;
+}
+
+.register-left, .register-right {
+    width: 100%;
+}
+
+
+
+.register-btn {
+    position: unset;
+}
+
+.password-terms {
+    margin-bottom: var(--px24);
+}
+
 
 }

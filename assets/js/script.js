@@ -129,7 +129,8 @@ let act = document.querySelectorAll(".accordion.active");
           active[j].nextElementSibling.style.maxHeight = null;
         }
         this.classList.toggle("active");
-        panel.style.maxHeight = panel.scrollHeight + "px";
+        var height = panel.scrollHeight + 32;
+        panel.style.maxHeight = height + "px";
       }
     });
   }

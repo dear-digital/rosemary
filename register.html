@@ -1,0 +1,125 @@
+---
+layout: default
+---
+
+<div class="register-page container">
+  <div class="register-content">
+    <h1 class="register-heading">Account aanmaken</h1>
+    <form class="register-form" action="index.html" method="post">
+      <div class="register-flex flex-box">
+        <div class="register-left">
+          <p class="credentials">Inloggegevens</p>
+          <div class="half-size-inputs flex-box">
+            <div class="email half-width">
+              <label for="email">E-mailadres</label>
+              <input id="email" class="" type="email" name="" value="" placeholder="Vul je e-mailadres in">
+            </div>
+            <div class="password half-width">
+              <label for="password">Kies een wachtwoord</label>
+              <input id="password" class="" type="password" name="" value="" placeholder="Vul je wachtwoord in">
+              <p class="password-terms">Min. 8 karakters, 1 cijfer en 1 speciaal teken.</p>
+            </div>
+          </div>
+          <p class="credentials">Bestelgegevens</p>
+          <p class="credentials">Type bestelling</p>
+          <input type="radio" id="private" class="no-disp" name="type-of-order" value="Particulier">
+          <span class="radio-span selected" data-value="Particulier"><span class="selected-radio"></span></span>
+          <label class="radio-label" for="private">Particulier</label>
+          <input type="radio" id="commercial" class="no-disp" name="type-of-order" value="Zakelijk">
+          <span class="radio-span" data-value="Zakelijk"><span class="selected-radio"></span></span>
+          <label class="radio-label" for="commercial">Zakelijk</label>
+          <p class="credentials">Leveringsadres</p>
+          <div class="half-size-inputs flex-box">
+            <div class="first-name half-width">
+              <label for="first-name">Voornaam</label>
+              <input id="first-name" class="" type="text" name="" value="" placeholder="Voornaam">
+            </div>
+            <div class="name half-width">
+              <label for="name">Naam</label>
+              <input id="name" class="" type="text" name="" value="" placeholder="Naam">
+            </div>
+          </div>
+          <div class="half-size-inputs flex-box">
+            <div class="street-name half-width">
+              <label for="street-name">Straatnaam</label>
+              <input id="street-name" class="" type="text" name="" value="" placeholder="Straatnaam">
+            </div>
+            <div class="house-number flex-box half-width">
+              <div class="one-third">
+                <label for="house-number">Huisnummer</label>
+                <input id="house-number" class="" type="text" name="" value="" placeholder="Nr">
+              </div>
+              <div class="one-third">
+                <input id="address" class="" type="text" name="" value="" placeholder="Toev.">
+              </div>
+              <div class="one-third">
+                <label for="bus-number">Busnr</label>
+                <input id="bus-number" class="" type="text" name="" value="">
+              </div>
+            </div>
+          </div>
+          <div class="half-size-inputs flex-box">
+            <div class="postcode half-width">
+              <label for="postcode">Postcode</label>
+              <input id="postcode" class="" type="number" name="" value="" placeholder="Postcode">
+            </div>
+            <div class="township half-width">
+              <label for="township">Gemeente</label>
+              <input id="township" class="" type="text" name="" value="" placeholder="Gemeente">
+            </div>
+          </div>
+          <p class="credentials">Factuuradres</p>
+          <div class="checkbox">
+            <div class="checkbox-1">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" style="width: 22px;"><defs><style>.svg-check-a{fill:#fff;}.svg-check-a,.svg-check-b{stroke:var(--leaf-green-color);stroke-width:2px;}.svg-check-b,.svg-check-d{fill:none;}.svg-check-b{stroke-linecap:round;stroke-linejoin:round;}.svg-check-c{stroke:none;}</style></defs><g class="svg-check-a"><rect class="svg-check-c" width="32" height="32"></rect><rect class="svg-check-d" x="1" y="1" width="30" height="30"></rect></g><path class="svg-check-b" d="M2279.346,1602.008v6.359h11.607" transform="translate(-2735.032 494.658) rotate(-45)"></path></svg>
+            </div>
+            <div class="checkbox-2">
+              Zelfde als leveringsadres
+            </div>
+        </div>
+        <p class="credentials">Nieuwsbrief</p>
+        <div class="checkbox">
+          <div class="checkbox-1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" style="width: 22px;"><defs><style>.svg-check-a{fill:#fff;}.svg-check-a,.svg-check-b{stroke:var(--leaf-green-color);stroke-width:2px;}.svg-check-b,.svg-check-d{fill:none;}.svg-check-b{stroke-linecap:round;stroke-linejoin:round;}.svg-check-c{stroke:none;}</style></defs><g class="svg-check-a"><rect class="svg-check-c" width="32" height="32"></rect><rect class="svg-check-d" x="1" y="1" width="30" height="30"></rect></g><path class="svg-check-b" d="M2279.346,1602.008v6.359h11.607" transform="translate(-2735.032 494.658) rotate(-45)"></path></svg>
+          </div>
+          <div class="checkbox-2">
+            Ingeschreven voor de nieuwsbrief
+          </div>
+      </div>
+        </div>
+
+        <div class="register-right">
+          <div class="register-btn">
+            Registreren
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script>
+
+  $('.radio-span').click(function() {
+    $('.radio-span').removeClass('selected');
+    $(this).addClass('selected');
+    $(this).prev().prop("checked", true);
+  });
+
+  jQuery(function ($) {
+    $('.checkbox').click(function(){
+      	$(this).removeClass("no-check");
+    	$(this).toggleClass("check");
+    });
+    //form submit handler
+    $('form').submit(function (e) {
+      //check atleat 1 checkbox is checked
+      if (!$(".checkbox").hasClass('check')) {
+        //prevent the default form submit if it is not checked
+        e.preventDefault();
+      	$(".checkbox").addClass("no-check");
+      }
+    })
+  });
+
+</script>
