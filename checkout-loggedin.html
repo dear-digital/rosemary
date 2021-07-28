@@ -1,0 +1,131 @@
+---
+layout: default
+---
+
+<div class="checkout-page">
+  <div class="checkout-page-content flex-box container">
+    <div class="checkout-page-left">
+      <h1>Jouw Rose-Mary bestelling</h1>
+      <div class="stages-number flex-box">
+        <div class="stage-number current-stage">
+          1
+        </div>
+        <div class="stage-number">
+          2
+        </div>
+        <div class="stage-number">
+          3
+        </div>
+        <span class="loading-bar">
+          <span class="loading-complete" data-complete="0"></span>
+        </span>
+      </div>
+
+      <div class="stages-name flex-box">
+        <div class="stage-name">
+          Gegevens
+        </div>
+        <div class="stage-name">
+          Levering
+        </div>
+        <div class="stage-name">
+          Afrekenen
+        </div>
+      </div>
+      <p class="login-text">Controleer jouw gegevens</p>
+      <p class="login-text">Type bestelling:</p>
+      <form class="login-form" action="index.html" method="post">
+        <input type="radio" id="private" class="no-disp" name="type-of-order" value="Particulier">
+        <span class="radio-span selected" data-value="Particulier"><span class="selected-radio"></span></span>
+        <label class="radio-label" for="private">Particulier</label>
+        <input type="radio" id="commercial" class="no-disp" name="type-of-order" value="Zakelijk">
+        <span class="radio-span" data-value="Zakelijk"><span class="selected-radio"></span></span>
+        <label class="radio-label" for="commercial">Zakelijk</label>
+        <div class="contact-details-heading flex-box">
+          <p  class="login-text">Contactgegevens</p>
+          <p class="edit">Wijzig</p>
+        </div>
+        <div class="personal-contact-details contact-details-text">
+          <p class="details-para">Laura@bombay-studio.com</p>
+          <p class="details-para">0412 34 56 78</p>
+        </div>
+        <div class="company-details no-disp">
+          <div class="company-contact-details contact-details-text">
+            <p class="details-para">Laura@bombay-studio.com</p>
+            <p class="details-para">0412 34 56 78</p>
+            <p class="details-para">Bedrijfsnaam</p>
+            <p class="details-para">BTW nummer</p>
+          </div>
+          <div class="refrence-title">
+            <span class="refrence">Referentie</span>
+            <span class="optional"> - Optioneel</span>
+          </div>
+          <input id="refrence" class="" type="text" name="" value="" placeholder="">
+          <p class="refrence-text">
+            Een nummer of code die je kunt meegeven voor eigen administratie. Dit wordt vermeld in je bestelbevestiging.
+          </p>
+        </div>
+        <div class="contact-details-heading flex-box">
+          <p  class="login-text">Contactgegevens</p>
+          <p class="edit">Wijzig</p>
+        </div>
+        <div class="personal-contact-details contact-details-text">
+          <p class="details-para">laura Touchant</p>
+          <p class="details-para">Straatnaam nr toev. Bus</p>
+          <p class="details-para">Postcode, gemeente</p>
+        </div>
+        <p class="login-text">Factuuradres</p>
+        <div class="checkbox">
+          <div class="checkbox-1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" style="width: 22px;"><defs><style>.svg-check-a{fill:#fff;}.svg-check-a,.svg-check-b{stroke:var(--leaf-green-color);stroke-width:2px;}.svg-check-b,.svg-check-d{fill:none;}.svg-check-b{stroke-linecap:round;stroke-linejoin:round;}.svg-check-c{stroke:none;}</style></defs><g class="svg-check-a"><rect class="svg-check-c" width="32" height="32"></rect><rect class="svg-check-d" x="1" y="1" width="30" height="30"></rect></g><path class="svg-check-b" d="M2279.346,1602.008v6.359h11.607" transform="translate(-2735.032 494.658) rotate(-45)"></path></svg>
+          </div>
+          <div class="checkbox-2">
+            Zelfde als leveringsadres
+          </div>
+        </div>
+        <div class="login-form-btns flex-box">
+          <a href="#" class="previous-step">Vorige stap</a>
+          <a href="#" class="login-btn">Volgende</a>
+        </div>
+      </form>
+    </div>
+    <div class="checkout-page-right">
+      {% include right-cart.html %}
+    </div>
+  </div>
+</div>
+
+<script>
+
+  $('.radio-span').click(function() {
+    $('.radio-span').removeClass('selected');
+    $(this).addClass('selected');
+    $(this).prev().prop("checked", true);
+    var data_val = $(this).data('value');
+    if(data_val == 'Particulier') {
+      $('.personal-contact-details').removeClass('no-disp');
+      $('.company-details').addClass('no-disp');
+    }
+    else {
+      $('.personal-contact-details').addClass('no-disp');
+      $('.company-details').removeClass('no-disp');
+    }
+  });
+
+  jQuery(function ($) {
+    $('.checkbox').click(function(){
+      	$(this).removeClass("no-check");
+    	$(this).toggleClass("check");
+    });
+    //form submit handler
+    $('form').submit(function (e) {
+      //check atleat 1 checkbox is checked
+      if (!$(".checkbox").hasClass('check')) {
+        //prevent the default form submit if it is not checked
+        e.preventDefault();
+      	$(".checkbox").addClass("no-check");
+      }
+    })
+  });
+
+</script>

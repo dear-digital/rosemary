@@ -13,10 +13,14 @@ layout: default
             <div class="email half-width">
               <label for="email">E-mailadres</label>
               <input id="email" class="" type="email" name="" value="" placeholder="Vul je e-mailadres in">
+              <span id="email-wrapper-correct" class="input-wrapper input-wrapper-correct no-disp"></span>
+              <span id="email-wrapper-wrong" class="input-wrapper input-wrapper-wrong no-disp"></span>
             </div>
             <div class="password half-width">
               <label for="password">Kies een wachtwoord</label>
               <input id="password" class="" type="password" name="" value="" placeholder="Vul je wachtwoord in">
+              <span id="password-wrapper-correct" class="input-wrapper input-wrapper-correct no-disp"></span>
+              <span id="password-wrapper-wrong" class="input-wrapper input-wrapper-wrong no-disp"></span>
               <p class="password-terms">Min. 8 karakters, 1 cijfer en 1 speciaal teken.</p>
             </div>
           </div>
@@ -33,21 +37,29 @@ layout: default
             <div class="first-name half-width">
               <label for="first-name">Voornaam</label>
               <input id="first-name" class="" type="text" name="" value="" placeholder="Voornaam">
+              <span id="first-name-wrapper-correct" class="input-wrapper input-wrapper-correct no-disp"></span>
+              <span id="first-name-wrapper-wrong" class="input-wrapper input-wrapper-wrong no-disp"></span>
             </div>
             <div class="name half-width">
               <label for="name">Naam</label>
               <input id="name" class="" type="text" name="" value="" placeholder="Naam">
+              <span id="name-wrapper-correct" class="input-wrapper input-wrapper-correct no-disp"></span>
+              <span id="name-wrapper-wrong" class="input-wrapper input-wrapper-wrong no-disp"></span>
             </div>
           </div>
           <div class="half-size-inputs flex-box">
             <div class="street-name half-width">
               <label for="street-name">Straatnaam</label>
               <input id="street-name" class="" type="text" name="" value="" placeholder="Straatnaam">
+              <span id="street-wrapper-correct" class="input-wrapper input-wrapper-correct no-disp"></span>
+              <span id="street-wrapper-wrong" class="input-wrapper input-wrapper-wrong no-disp"></span>
             </div>
             <div class="house-number flex-box half-width">
               <div class="one-third">
                 <label for="house-number">Huisnummer</label>
                 <input id="house-number" class="" type="text" name="" value="" placeholder="Nr">
+                <span id="house-no-wrapper-correct" class="input-wrapper input-wrapper-correct no-disp"></span>
+                <span id="house-no-wrapper-wrong" class="input-wrapper input-wrapper-wrong no-disp"></span>
               </div>
               <div class="one-third">
                 <input id="address" class="" type="text" name="" value="" placeholder="Toev.">
@@ -62,10 +74,14 @@ layout: default
             <div class="postcode half-width">
               <label for="postcode">Postcode</label>
               <input id="postcode" class="" type="number" name="" value="" placeholder="Postcode">
+              <span id="postcode-wrapper-correct" class="input-wrapper input-wrapper-correct no-disp"></span>
+              <span id="postcode-wrapper-wrong" class="input-wrapper input-wrapper-wrong no-disp"></span>
             </div>
             <div class="township half-width">
               <label for="township">Gemeente</label>
               <input id="township" class="" type="text" name="" value="" placeholder="Gemeente">
+              <span id="township-wrapper-correct" class="input-wrapper input-wrapper-correct no-disp"></span>
+              <span id="township-wrapper-wrong" class="input-wrapper input-wrapper-wrong no-disp"></span>
             </div>
           </div>
           <p class="credentials">Factuuradres</p>
@@ -121,5 +137,160 @@ layout: default
       }
     })
   });
+
+  function validateEmail(email) {
+    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+  }
+
+  function hasNumber(myString) {
+    return /\d/.test(myString);
+  }
+
+  function onlyNumber(string) {
+    return /^\d+$/.test(string);
+  }
+
+  function validatePwd(pwd) {
+    var pwd_len = pwd.length;
+    if (pwd_len > 7) {
+      if(hasNumber(pwd)) {
+        if(/^[a-zA-Z0-9- ]*$/.test(pwd) == false) {
+          return true;
+        }
+      }
+    }
+  }
+
+  function validateNumber(num) {
+    var num_len = num.length;
+    if (num_len > 0){
+      if(onlyNumber(num)) {
+        return true;
+      }
+    }
+  }
+
+  function validateName(string){
+    var string_len = string.length;
+    if (string_len > 0) {
+      if(!hasNumber(string)){
+        if(/^[a-zA-Z0-9- ]*$/.test(string) == true) {
+          return true;
+        }
+      }
+    }
+  }
+
+  function validateStreet(string){
+    var string_len = string.length;
+    if (string_len > 0) {
+      if(/^[a-zA-Z0-9- ]*$/.test(string) == true) {
+        return true;
+      }
+    }
+  }
+
+  $('input').click(function() {
+    var emailhasFocus = $('#email').is(':focus');
+    var pwdhasFocus = $('#password').is(':focus');
+    var firstNameFocus = $('#first-name').is(':focus');
+    var nameFocus = $('#name').is(':focus');
+    var streetFocus = $('#street-name').is(':focus');
+    var houseNumFocus = $('#house-number').is(':focus');
+    var postcodeFocus = $('#postcode').is(':focus');
+    var townshipFocus = $('#township').is(':focus');
+    if(!pwdhasFocus) {
+      var pwd = $("#password").val();
+      if(validatePwd(pwd)) {
+        $('#password-wrapper-wrong').addClass('no-disp');
+        $('#password-wrapper-correct').removeClass('no-disp');
+        }
+        else {
+          $('#password-wrapper-correct').addClass('no-disp');
+          $('#password-wrapper-wrong').removeClass('no-disp');
+        }
+    }
+    if(!emailhasFocus) {
+      var email = $("#email").val();
+
+      if(validateEmail(email)) {
+        $('#email-wrapper-wrong').addClass('no-disp');
+        $('#email-wrapper-correct').removeClass('no-disp');
+      }
+      else {
+        $('#email-wrapper-correct').addClass('no-disp');
+        $('#email-wrapper-wrong').removeClass('no-disp');
+      }
+    }
+    if(!firstNameFocus) {
+      var firstName = $("#first-name").val();
+      if(validateName(firstName)) {
+        $('#first-name-wrapper-wrong').addClass('no-disp');
+        $('#first-name-wrapper-correct').removeClass('no-disp');
+        }
+        else {
+          $('#first-name-wrapper-correct').addClass('no-disp');
+          $('#first-name-wrapper-wrong').removeClass('no-disp');
+        }
+    }
+    if(!nameFocus) {
+      var name = $("#name").val();
+      if(validateName(name)) {
+        $('#name-wrapper-wrong').addClass('no-disp');
+        $('#name-wrapper-correct').removeClass('no-disp');
+        }
+        else {
+          $('#name-wrapper-correct').addClass('no-disp');
+          $('#name-wrapper-wrong').removeClass('no-disp');
+        }
+    }
+    if(!streetFocus) {
+      var street = $("#street-name").val();
+      if(validateStreet(street)) {
+        $('#street-wrapper-wrong').addClass('no-disp');
+        $('#street-wrapper-correct').removeClass('no-disp');
+        }
+        else {
+          $('#street-wrapper-correct').addClass('no-disp');
+          $('#street-wrapper-wrong').removeClass('no-disp');
+        }
+    }
+    if(!houseNumFocus) {
+      var houseNum = $("#house-number").val();
+      if(validateNumber(houseNum)) {
+        $('#house-no-wrapper-wrong').addClass('no-disp');
+        $('#house-no-wrapper-correct').removeClass('no-disp');
+        }
+        else {
+          $('#house-no-wrapper-correct').addClass('no-disp');
+          $('#house-no-wrapper-wrong').removeClass('no-disp');
+        }
+    }
+    if(!postcodeFocus) {
+      var postcode = $("#postcode").val();
+      if(validateNumber(postcode)) {
+        $('#postcode-wrapper-wrong').addClass('no-disp');
+        $('#postcode-wrapper-correct').removeClass('no-disp');
+        }
+        else {
+          $('#postcode-wrapper-correct').addClass('no-disp');
+          $('#postcode-wrapper-wrong').removeClass('no-disp');
+        }
+    }
+    if(!townshipFocus) {
+      var township = $("#township").val();
+      if(validateName(township)) {
+        $('#township-wrapper-wrong').addClass('no-disp');
+        $('#township-wrapper-correct').removeClass('no-disp');
+        }
+        else {
+          $('#township-wrapper-correct').addClass('no-disp');
+          $('#township-wrapper-wrong').removeClass('no-disp');
+        }
+    }
+  });
+
+
 
 </script>

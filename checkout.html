@@ -1,0 +1,129 @@
+---
+layout: default
+---
+
+<div class="checkout-page">
+  <div class="checkout-page-content flex-box container">
+    <div class="checkout-page-left">
+      <h1>Jouw Rose-Mary bestelling</h1>
+      <div class="stages-number flex-box">
+        <div class="stage-number current-stage">
+          1
+        </div>
+        <div class="stage-number">
+          2
+        </div>
+        <div class="stage-number">
+          3
+        </div>
+        <span class="loading-bar">
+          <span class="loading-complete" data-complete="0"></span>
+        </span>
+      </div>
+
+      <div class="stages-name flex-box">
+        <div class="stage-name">
+          Gegevens
+        </div>
+        <div class="stage-name">
+          Levering
+        </div>
+        <div class="stage-name">
+          Afrekenen
+        </div>
+      </div>
+      <p class="login-text">Inloggen</p>
+      <form class="login-form" action="index.html" method="post">
+        <div class="half-size-inputs">
+          <div class="email half-width">
+            <label for="email">E-mailadres</label>
+            <input id="email" class="" type="email" name="" value="" placeholder="Vul je e-mailadres in">
+            <span id="email-wrapper-correct" class="input-wrapper input-wrapper-correct no-disp"></span>
+            <span id="email-wrapper-wrong" class="input-wrapper input-wrapper-wrong no-disp"></span>
+            <p class="email-error-msg error-msg no-disp">
+              Er is geen geldig e-mailadres ingevuld. Controleer of het e-mailadres een @ en een punt bevat.
+            </p>
+          </div>
+          <div class="password half-width">
+            <div class="pwd-label-forgot-pwd flex-box">
+              <label for="password">Wachtwoord</label>
+              <a href="#" class="forgot-pwd">Wachtwoord vergeten?</a>
+            </div>
+            <input id="password" class="" type="password" name="" value="" placeholder="Wachtwoord">
+            <span id="password-wrapper-correct" class="input-wrapper input-wrapper-correct no-disp"></span>
+            <span id="password-wrapper-wrong" class="input-wrapper input-wrapper-wrong no-disp"></span>
+            <p class="password-error-msg error-msg no-disp">
+              Er is geen wachtwoord ingevuld
+            </p>
+          </div>
+        </div>
+        <a href="#" class="skip-login">
+          Of ga verder zonder in te loggen
+        </a>
+        <div class="login-form-btns flex-box">
+          <a href="#" class="previous-step">Vorige stap</a>
+          <a href="#" class="login-btn">Inloggen</a>
+        </div>
+      </form>
+    </div>
+    <div class="checkout-page-right">
+      {% include right-cart.html %}
+    </div>
+  </div>
+</div>
+
+<script>
+
+  function validateEmail(email) {
+    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+  }
+
+  function hasNumber(myString) {
+    return /\d/.test(myString);
+  }
+
+  function validatePwd(pwd) {
+    var pwd_len = pwd.length;
+    if (pwd_len > 7) {
+      if(hasNumber(pwd)) {
+        if(/^[a-zA-Z0-9- ]*$/.test(pwd) == false) {
+          return true;
+        }
+      }
+    }
+  }
+
+  $('input').click(function() {
+    var emailhasFocus = $('#email').is(':focus');
+    var pwdhasFocus = $('#password').is(':focus');
+    if(!pwdhasFocus) {
+      var pwd = $("#password").val();
+      if(validatePwd(pwd)) {
+        $('#password-wrapper-wrong').addClass('no-disp');
+        $('#password-wrapper-correct').removeClass('no-disp');
+        $('.email-error-msg').addClass('no-disp');
+        }
+        else {
+          $('#password-wrapper-correct').addClass('no-disp');
+          $('#password-wrapper-wrong').removeClass('no-disp');
+          $('.email-error-msg').removeClass('no-disp');
+        }
+    }
+    if(!emailhasFocus) {
+      var email = $("#email").val();
+
+      if(validateEmail(email)) {
+        $('#email-wrapper-wrong').addClass('no-disp');
+        $('#email-wrapper-correct').removeClass('no-disp');
+        $('.password-error-msg').addClass('no-disp');
+      }
+      else {
+        $('#email-wrapper-correct').addClass('no-disp');
+        $('#email-wrapper-wrong').removeClass('no-disp');
+        $('.password-error-msg').removeClass('no-disp');
+      }
+    }
+  });
+
+</script>

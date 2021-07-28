@@ -1,0 +1,96 @@
+---
+layout: default
+---
+
+<div class="checkout-page second-stage">
+  <div class="checkout-page-content flex-box container">
+    <div class="checkout-page-left">
+      <h1>Jouw Rose-Mary bestelling</h1>
+      <div class="stages-number flex-box">
+        <div class="stage-number current-stage">
+          1
+        </div>
+        <div class="stage-number current-stage">
+          2
+        </div>
+        <div class="stage-number">
+          3
+        </div>
+        <span class="loading-bar">
+          <span class="loading-complete" data-complete="50"></span>
+        </span>
+      </div>
+
+      <div class="stages-name flex-box">
+        <div class="stage-name">
+          Gegevens
+        </div>
+        <div class="stage-name">
+          Levering
+        </div>
+        <div class="stage-name">
+          Afrekenen
+        </div>
+      </div>
+      <p class="login-text">
+        Kies de dag en het tijdstip wanneer je je bestelling wil ontvangen.
+      </p>
+      <form class="login-form" action="index.html" method="post">
+        <div class="half-size-inputs flex-box">
+          <div class="date-picker half-width">
+            <label for="date">Leveringsdatum</label>
+            <input id="date" class="" type="date" name="" value="" placeholder="Voornaam">
+          </div>
+          <div class="time-picker half-width">
+            <label for="subject">Tijdstip</label>
+            <select name="subject" id="subject" class="dropdown no-disp" placeholder="Kies een tijdstip">
+              <option value="15u30 - 16u30">15u30 - 16u30</option>
+              <option value="16u30 - 18u00">16u30 - 18u00</option>
+              <option value="18u00 - 19u30">18u00 - 19u30</option>
+              <option value="15u30 - 18u00 - ben toch thuis :)">15u30 - 18u00 - ben toch thuis :)</option>
+            </select>
+
+            <div class="shop-categories">
+              <div class="accordion">
+                <span class="shop-categories-text">Kies een Onderwerp</span>
+                <span class="down-chevron">
+                  <svg class="icon-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+                      <g>
+                        <path d="m 21.365632,3.8463214 27.760611,-0.1607933 0.08747,-27.6872871 8.12143,-0.09916 -0.107135,35.888216 -35.940265,0.107799 z" transform="matrix(0.70421428,0.7099875,-0.70421428,0.7099875,0,0)"></path>
+                      </g>
+                  </svg>
+                </span>
+              </div>
+              <div class="panel">
+                <span data-value="15u30 - 16u30" class="shop-category">15u30 - 16u30</span>
+                <span data-value="16u30 - 18u00" class="shop-category">16u30 - 18u00</span>
+                <span data-value="18u00 - 19u30" class="shop-category">18u00 - 19u30</span>
+                <span data-value="15u30 - 18u00 - ben toch thuis :)" class="shop-category">15u30 - 18u00 - ben toch thuis :)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="login-form-btns flex-box">
+          <a href="#" class="previous-step">Vorige stap</a>
+          <a href="#" class="login-btn">Volgende</a>
+        </div>
+      </form>
+    </div>
+    <div class="checkout-page-right">
+      {% include right-cart.html %}
+    </div>
+  </div>
+</div>
+
+<script>
+
+  $('.second-stage .login-form .panel span').click(function() {
+    var selected_value = $(this).data('value');
+    $('#subject').val(selected_value);
+    $('.shop-categories-text').html(selected_value);
+    $('.second-stage .login-form .accordion').removeClass('active');
+    $('.second-stage .login-form .panel').removeClass('panel-open');
+    $('.second-stage .login-form .panel').css('max-height', '');
+  });
+
+</script>
