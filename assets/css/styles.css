@@ -54,6 +54,7 @@ body.no-scroll {
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  transition: .4s ease;
 }
 .btn-white {
   background-color: #FFFFFF;
@@ -276,6 +277,54 @@ display: flex;
 .popup-text p {
 font-weight: 300;
 }
+
+.registered-popup-wrapper .popup{
+  padding: 174px 142px;
+}
+
+.registered-popup-wrapper p {
+  margin-bottom: 40px
+}
+
+.red-popup-wrapper .popup {
+    width: unset;
+    padding: 40px;
+}
+
+.red-popup-wrapper h2 {
+  font-family: var(--main-font);
+    color: var(--red-color);
+}
+
+.red-popup-wrapper .popup-text {
+    max-width: 282px;
+}
+
+.red-popup-wrapper p {
+  margin-bottom: var(--px16);
+}
+
+.red-popup-wrapper .default-btn {
+    background-color: var(--leaf-green-color);
+    margin-bottom: var(--px16);
+    width: 100%;
+}
+
+.red-popup-wrapper .default-btn:hover {
+  background-color: var(--leaf-green-dark-color);
+}
+
+.red-popup-wrapper .default-btn.white-btn {
+  background-color: var(--background-main-color);
+  margin-bottom: 0;
+  color: var(--main-color);
+  border: 1px solid #023049;
+}
+
+.red-popup-wrapper .default-btn.white-btn:hover {
+  background-color: var(--hover-grey-color);
+}
+
 .popup-text ul {
   max-width: 300px;
   text-align: left;
@@ -498,7 +547,7 @@ transform: rotate(180deg);
 .languages {
   position: absolute;
   background-color: var(--background-main-color);
-  top: 14px;
+  top: 24px;
   min-width: 46.56px;
   left: -8px;
   color: #023049;
@@ -2856,10 +2905,218 @@ margin-bottom: -60px;
   width: 70%;
 }
 
+.third-stage-right-img img {
+  width: 100%;
+}
+
 
 
 /*
 *****************************************************************************Checkout-End*****************************************************************************
+*/
+
+/*
+*****************************************************************************My-Account-Start*****************************************************************************
+*/
+
+.my-account-page{
+  padding-top: 40px;
+  margin-bottom: 74px;
+}
+
+.my-account-page-content {
+    background-color: var(--background-light-color);
+    border-radius: 8px;
+    padding: 40px 64px;
+    box-shadow: 0px 0px 24px #0230490d;
+}
+
+.my-account-page-content h1 {
+  font-size: var(--px32);
+    line-height: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.facts-orders.flex-box {
+    width: 255px;
+    margin: 0 auto;
+    justify-content: space-between;
+    line-height: var(--px24);
+    font-weight: 300;
+    margin-bottom: 40px;
+}
+
+.fact-order {
+  cursor: pointer;
+  transition: .4s ease;
+}
+
+.fact-order.selected {
+  text-decoration: underline;
+}
+
+.my-account-page .loading-bar {
+    height: 12px;
+    position: relative;
+    border-radius: 12px;
+    margin-top: 52px;
+    margin-bottom: 38px;
+}
+
+.my-account-page .loading-complete {
+    height: 12px;
+    border-radius: 12px;
+}
+
+.loading-bar-header {
+    position: absolute;
+    bottom: -9px;
+}
+
+.order-left {
+  position: absolute;
+  font-size: 13px;
+    line-height: 16px;
+    font-weight: 500;
+    padding: 5px;
+    border: 1px solid;
+    border-radius: 8px;
+    background-color: #fff;
+    bottom: 24px;
+}
+
+.my-account-page table {
+  width: 100%;
+  margin-bottom: 111px;
+  border-collapse: collapse;
+}
+
+.table-header-border {
+  border-bottom: 1px solid var(--leaf-green-color);
+}
+
+.table-header th {
+  text-align: left;
+  font-weight: 500;
+    padding-bottom: var(--px8);
+    border-bottom: 1px solid var(--leaf-green-color);
+    margin-bottom: var(--px24);
+}
+
+.my-account-page td {
+    font-size: var(--px16);
+    line-height: 20px;
+    font-weight: 300;
+    margin-bottom: 15px;
+    color: var(--leaf-green-color);
+}
+
+.table-data td {
+  padding: 12px 0;
+}
+
+.first-raw td{
+  padding-top: var(--px24);
+}
+
+.td-details {
+  font-size: 13px;
+    line-height: var(--px16);
+    font-weight: 500;
+    text-decoration: underline;
+    cursor: pointer;
+    color: var(--light-green-color);
+}
+
+.td-tag {
+  font-size: 13px;
+    line-height: var(--px16);
+    font-weight: 500;
+    color: var(--main-color);
+    padding: 6px;
+    border: 1px solid;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.td-tag.current {
+  background-color: var(--light-green-color);
+  color: #fff;
+  border: none;
+}
+
+.track-order {
+    color: var(--main-color);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.my-account-faq-btn {
+    padding: var(--px16) 0 12px;
+    width: 204px;
+    text-align: center;
+    background-color: var(--leaf-green-color);
+    color: #fff;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: .4s ease;
+    box-shadow: 0px 0px 24px #0230491a;
+    margin-right: var(--px24);
+}
+
+.my-account-faq-btn:hover {
+  background-color: var(--leaf-green-dark-color);
+}
+
+.my-account-contact-btn {
+  padding: var(--px16) 0 12px;
+  width: 204px;
+  text-align: center;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: .4s ease;
+  border: 1px solid #023049;
+  background-color: #fff;
+}
+
+.my-account-contact-btn:hover {
+  background-color: var(--hover-grey-color);
+}
+
+.add-new-address-btn {
+  padding: var(--px16) 0 12px;
+  text-align: center;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: .4s ease;
+  border: 1px solid #023049;
+  background-color: #fff;
+  cursor: pointer;
+  width: 204px;
+  margin-bottom: var(--px24);
+}
+
+.add-new-address-btn:hover {
+  background-color: var(--hover-grey-color);
+}
+
+.my-account-page .checkbox {
+    width: 35%;
+    max-width: 225px;
+    font-size: var(--px16);
+    line-height: var(--px24);
+    font-weight: 500;
+    color: var(--main-color);
+    margin-bottom: var(--px24);
+}
+
+.my-account-page .checkbox:last-child{
+  max-width: 288px;
+}
+
+/*
+*****************************************************************************My-Account-End*****************************************************************************
 */
 
 /*
@@ -3845,6 +4102,93 @@ span.bike-line {
 
 .password-terms {
     margin-bottom: var(--px24);
+}
+
+.checkout-page-left {
+    width: 100%;
+    padding: 20px;
+}
+
+.login-form input {
+    width: 90%;
+}
+
+.pwd-label-forgot-pwd {
+    width: 90%;
+}
+
+.login-form-btns a {
+    width: 30%;
+    min-width: unset;
+}
+
+.error-msg {
+    width: 90%;
+}
+
+.checkout-page {
+  margin-bottom: 0;
+}
+
+.checkout-page-left h1 {
+    font-size: var(--px24);
+    line-height: 32px;
+}
+
+.checkout-page .checkbox {
+    width: 90%;
+}
+
+.refrence-text {
+    width: 90%;
+}
+
+.second-stage .half-size-inputs {
+    width: 90%;
+    flex-direction: column;
+}
+
+.second-stage .half-width {
+    width: 100%;
+}
+
+.third-stage-content {
+    flex-direction: column-reverse;
+}
+
+.third-stage-left, .third-stage-right {
+    width: 100%;
+}
+
+.checkout-page .menu-drawer-cart {
+    margin: 0;
+    width: 100%;
+}
+
+.my-account-page-content {
+  padding: 20px;
+}
+
+.my-account-page .checkbox {
+    width: 90%;
+}
+
+.order-content.flex-box {
+    background-color: var(--background-main-color);
+    padding: var(--px16);
+    border-radius: 8px;
+    box-shadow: 0px 8px 16px #38493d1a;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--px24);
+}
+
+.order-details-right div, .order-details-left div {
+  padding: var(--px8) 0;
+}
+
+.order-details-right {
+    font-weight: 300;
 }
 
 

@@ -1,0 +1,281 @@
+---
+layout: default
+---
+
+<div class="my-account-page">
+  <div class="container">
+    <div class="my-account-page-content">
+      <h1>Welkom Laura</h1>
+      <div class="facts-orders flex-box">
+        <div class="fact-order facts selected">
+          Gegevens
+        </div>
+        <div class="fact-order orders">
+          Bestellingen
+        </div>
+      </div>
+      <div class="fact-section">
+        <p class="login-text">Standaard type bestelling:</p>
+        <form class="login-form" action="index.html" method="post">
+          <input type="radio" id="private" class="no-disp" name="type-of-order" value="Particulier">
+          <span class="radio-span selected" data-value="Particulier"><span class="selected-radio"></span></span>
+          <label class="radio-label" for="private">Particulier</label>
+          <input type="radio" id="commercial" class="no-disp" name="type-of-order" value="Zakelijk">
+          <span class="radio-span" data-value="Zakelijk"><span class="selected-radio"></span></span>
+          <label class="radio-label" for="commercial">Zakelijk</label>
+          <div class="contact-details-heading flex-box">
+            <p  class="login-text">Contactgegevens</p>
+            <p class="edit">Wijzig</p>
+          </div>
+          <div class="personal-contact-details contact-details-text">
+            <p class="details-para">Laura@bombay-studio.com</p>
+            <p class="details-para">0412 34 56 78</p>
+          </div>
+          <div class="company-details no-disp">
+            <div class="company-contact-details contact-details-text">
+              <p class="details-para">Laura@bombay-studio.com</p>
+              <p class="details-para">0412 34 56 78</p>
+              <p class="details-para">Bedrijfsnaam</p>
+              <p class="details-para">BTW nummer</p>
+            </div>
+            <div class="refrence-title">
+              <span class="refrence">Referentie</span>
+              <span class="optional"> - Optioneel</span>
+            </div>
+            <input id="refrence" class="" type="text" name="" value="" placeholder="">
+            <p class="refrence-text">
+              Een nummer of code die je kunt meegeven voor eigen administratie. Dit wordt vermeld in je bestelbevestiging.
+            </p>
+          </div>
+          <div class="contact-details-heading flex-box">
+            <p  class="login-text">Contactgegevens</p>
+            <p class="edit">Wijzig</p>
+          </div>
+          <div class="personal-contact-details contact-details-text">
+            <p class="details-para">laura Touchant</p>
+            <p class="details-para">Straatnaam nr toev. Bus</p>
+            <p class="details-para">Postcode, gemeente</p>
+          </div>
+          <div class="add-new-address-btn">
+            Voeg nieuw adres toe
+          </div>
+          <p class="login-text">Factuuradres</p>
+          <div class="checkbox">
+            <div class="checkbox-1">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" style="width: 22px;"><defs><style>.svg-check-a{fill:#fff;}.svg-check-a,.svg-check-b{stroke:var(--leaf-green-color);stroke-width:2px;}.svg-check-b,.svg-check-d{fill:none;}.svg-check-b{stroke-linecap:round;stroke-linejoin:round;}.svg-check-c{stroke:none;}</style></defs><g class="svg-check-a"><rect class="svg-check-c" width="32" height="32"></rect><rect class="svg-check-d" x="1" y="1" width="30" height="30"></rect></g><path class="svg-check-b" d="M2279.346,1602.008v6.359h11.607" transform="translate(-2735.032 494.658) rotate(-45)"></path></svg>
+            </div>
+            <div class="checkbox-2">
+              Zelfde als leveringsadres
+            </div>
+          </div>
+          <p class="login-text">Nieuwsbrief</p>
+          <div class="checkbox">
+            <div class="checkbox-1">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" style="width: 22px;"><defs><style>.svg-check-a{fill:#fff;}.svg-check-a,.svg-check-b{stroke:var(--leaf-green-color);stroke-width:2px;}.svg-check-b,.svg-check-d{fill:none;}.svg-check-b{stroke-linecap:round;stroke-linejoin:round;}.svg-check-c{stroke:none;}</style></defs><g class="svg-check-a"><rect class="svg-check-c" width="32" height="32"></rect><rect class="svg-check-d" x="1" y="1" width="30" height="30"></rect></g><path class="svg-check-b" d="M2279.346,1602.008v6.359h11.607" transform="translate(-2735.032 494.658) rotate(-45)"></path></svg>
+            </div>
+            <div class="checkbox-2">
+              Ingeschreven voor de nieuwsbrief
+            </div>
+          </div>
+        </form>
+
+      </div>
+      <div class="order-section no-disp">
+        <p class="login-text">
+          Wist je dat je bij je zesde bestelling de verzendkosten cadeau krijgt?
+        </p>
+        <div class="loading-bar">
+          <span class="order-left">Nog maar 1 bestelling!</span>
+          <div class="loading-complete" data-complete="80">
+          </div>
+          <span class="loading-bar-header">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><defs><style>.a-icon-bar-header{fill:#fff;stroke:#152018;stroke-linecap:round;stroke-linejoin:round;stroke-width:5px;}.b-icon-bar-header{stroke:none;}.c-icon-bar-header{fill:none;}</style></defs><g transform="translate(-0.691 -0.691)"><g class="a-icon-bar-header" transform="translate(0.691 0.691)"><circle class="b-icon-bar-header" cx="12" cy="12" r="12"/><circle class="c-icon-bar-header" cx="12" cy="12" r="9.5"/></g></g></svg>
+          </span>
+        </div>
+        <table class="no-t-m">
+          <tr class="table-header">
+            <th>Bestelnummer</th>
+            <th>Datum</th>
+            <th>Bestelling</th>
+            <th>Status</th>
+          </tr>
+          <span class="table-header-border">
+
+          </span>
+          <tr class="table-data first-raw">
+            <td>BE052468</td>
+            <td>21/05/2020</td>
+            <td>€ 24,00 <span class="td-details">Details</span></td>
+            <td><span class="td-tag">In behandeling</span></td>
+          </tr>
+          <tr class="table-data">
+            <td>BE052468</td>
+            <td>21/05/2020</td>
+            <td>€ 24,00 <span class="td-details">Details</span></td>
+            <td><span class="td-tag">Wordt bereid</span></td>
+          </tr>
+          <tr class="table-data">
+            <td>BE052468</td>
+            <td>21/05/2020</td>
+            <td>€ 24,00 <span class="td-details">Details</span></td>
+            <td><span class="td-tag">Klaar voor verzending</span></td>
+          </tr>
+          <tr class="table-data">
+            <td>BE052468</td>
+            <td>21/05/2020</td>
+            <td>€ 24,00 <span class="td-details">Details</span></td>
+            <td><span class="td-tag current">Onderweg naar jou!</span>
+              <span class="track-order">
+                Volg je bestelling
+                <span class="right-chevron">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="10.121" height="5.81" viewBox="0 0 10.121 5.81"><defs><style>.a-icon-left-chevron{fill:none;stroke:#152018;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px;}</style></defs><path class="a-icon-left-chevron" d="M7431,3152l4,4,2.333-2.333L7439,3152" transform="translate(-7429.939 -3150.939)"/></svg>
+                </span>
+              </span>
+            </td>
+          </tr>
+        </table>
+        <div class="mobile-orders no-d">
+          <p class="login-text">
+            Meest recente bestelling:
+          </p>
+          <div class="order-details">
+            <div class="order-content flex-box">
+              <div class="order-details-left">
+                <div>
+                  Datum
+                </div>
+                <div>
+                  Bestelnummer
+                </div>
+                <div class="">
+                  Bestelling
+                </div>
+                <div class="">
+                  Status
+                </div>
+              </div>
+              <div class="order-details-right">
+                <div class="">
+                  21/05/2020
+                </div>
+                <div class="">
+                  BE052468
+                </div>
+                <div class="">
+                  € 24,00
+                  <span class="td-details">Details</span>
+                </div>
+                <div >
+                  <span class="td-tag">In behandeling</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <p class="login-text">
+            Eerdere bestellingen
+          </p>
+          <div class="order-details">
+            <div class="order-content flex-box">
+              <div class="order-details-left">
+                <div>
+                  Datum
+                </div>
+                <div>
+                  Bestelnummer
+                </div>
+                <div class="">
+                  Bestelling
+                </div>
+                <div class="">
+                  Status
+                </div>
+              </div>
+              <div class="order-details-right">
+                <div class="">
+                  21/05/2020
+                </div>
+                <div class="">
+                  BE052468
+                </div>
+                <div class="">
+                  € 24,00
+                  <span class="td-details">Details</span>
+                </div>
+                <div >
+                  <span class="td-tag current">Onderweg naar jou</span>
+                  <div class="track-order">
+                    Volg je bestelling
+                    <span class="right-chevron">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="10.121" height="5.81" viewBox="0 0 10.121 5.81"><defs><style>.a-icon-left-chevron{fill:none;stroke:#152018;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px;}</style></defs><path class="a-icon-left-chevron" d="M7431,3152l4,4,2.333-2.333L7439,3152" transform="translate(-7429.939 -3150.939)"/></svg>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="my-account-btns-section">
+          <p class="login-text">
+            Heb je een vraag over jouw bestelling?
+          </p>
+          <div class="my-account-btns flex-box">
+            <a href="#" class="my-account-faq-btn">Veelgestelde vragen</a>
+            <a href="#" class="my-account-contact-btn">Contact</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+
+  var header_position = $('.my-account-page .loading-complete').data('complete');
+  var windowsize = $(window).width();
+  if (windowsize < 992) {
+    if (header_position > 60) {
+      $('.order-left').css('right', 0);
+    }
+    else {
+      $('.order-left').css('margin-left',header_position+'%');
+    }
+  }
+  else {
+    $('.order-left').css('margin-left',header_position+'%');
+  }
+  header_position = header_position - 1;
+  $('.loading-bar-header').css('margin-left',header_position+'%');
+
+  jQuery(function ($) {
+    $('.checkbox').click(function(){
+      	$(this).removeClass("no-check");
+    	$(this).toggleClass("check");
+    });
+    //form submit handler
+    $('form').submit(function (e) {
+      //check atleat 1 checkbox is checked
+      if (!$(".checkbox").hasClass('check')) {
+        //prevent the default form submit if it is not checked
+        e.preventDefault();
+      	$(".checkbox").addClass("no-check");
+      }
+    })
+  });
+
+  $('.fact-order').click(function() {
+    $('.fact-order').removeClass('selected');
+    $(this).addClass('selected');
+    if($(this).hasClass('facts')){
+      $('.order-section').addClass('no-disp');
+      $('.fact-section').removeClass('no-disp');
+    }
+    else{
+      $('.order-section').removeClass('no-disp');
+      $('.fact-section').addClass('no-disp');
+    }
+  });
+
+</script>
