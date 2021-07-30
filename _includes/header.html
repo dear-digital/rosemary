@@ -67,8 +67,43 @@
           </form>
           <span class="header-not-user">Nog geen account? <a href="#" class="header-signup-link"> Start hier</a></span>
         </div>
+        <div class="header-user-login-wrong no-disp">
+          <form class="header-login-form" action="index.html" method="post">
+            <label class="header-login-label" for="header-login-email">E-mailadres</label>
+            <input class="header-login-input" type="email" id="header-login-email" name="" value="" placeholder="E-mailadres">
+            <span id="header-email-wrapper-wrong" class="input-wrapper header-input-wrapper-wrong"></span>
+            <label class="header-login-label" for="header-login-password">Wachtwoord</label>
+            <span class="header-forgot-password">Wachtwoord vergeten?</span>
+            <input class="header-login-input" type="password" id="header-login-password" name="" value="">
+            <span id="header-password-wrapper-wrong" class="input-wrapper header-input-wrapper-wrong"></span>
+            <input type="submit" class="header-login-submit-btn" name="" value="Inloggen">
+          </form>
+          <span class="header-not-user">Nog geen account? <a href="#" class="header-signup-link"> Start hier</a></span>
+        </div>
+
+        <div class="header-user-login-wrong no-disp">
+          <form class="header-login-form" action="index.html" method="post">
+            <label class="header-login-label" for="header-login-email">E-mailadres</label>
+            <input class="header-login-input" type="email" id="header-login-email" name="" value="" placeholder="E-mailadres">
+            <span id="header-email-wrapper-correct" class="input-wrapper header-input-wrapper-correct"></span>
+            <label class="header-login-label" for="header-login-password">Wachtwoord</label>
+            <span class="header-forgot-password">Wachtwoord vergeten?</span>
+            <input class="header-login-input" type="password" id="header-login-password" name="" value="">
+            <span id="header-password-wrapper-correct" class="input-wrapper header-input-wrapper-correct"></span>
+            <input type="submit" class="header-login-submit-btn" name="" value="Inloggen">
+          </form>
+          <span class="header-not-user">Nog geen account? <a href="#" class="header-signup-link"> Start hier</a></span>
+        </div>
+        <div class="header-user-logged-in no-disp">
+          <div class="header-user-welcome">
+            Welkom terug Laura
+          </div>
+          <a href="#" class="header-user-link"><span class="link-text">Mijn gegevens</span></a>
+          <a href="#" class="header-user-link"><span class="link-text">Mijn bestellingen</span></a>
+        </div>
         <div class="header-cart">
           <svg class="header-cart-svg" xmlns="http://www.w3.org/2000/svg" width="23.5" height="22.75" viewBox="0 0 23.5 22.75"><defs><style>.a-icon-shopping-cart-green,.b-icon-shopping-cart-green{fill:none;stroke:#38493d;stroke-linecap:round;stroke-linejoin:round;}.a-icon-shopping-cart-green{stroke-width:2px;}.b-icon-shopping-cart-green{stroke-width:1.5px;}</style></defs><g transform="translate(-0.25 -0.25)"><circle class="a-icon-shopping-cart-green" cx="1" cy="1" r="1" transform="translate(8 20)"/><circle class="a-icon-shopping-cart-green" cx="1" cy="1" r="1" transform="translate(19 20)"/><path class="b-icon-shopping-cart-green" d="M1,1H5L7.68,14.39a2,2,0,0,0,2,1.61H19.4a2,2,0,0,0,2-1.61L23,6H6"/></g></svg>
+          <span class="cart-qty"><span class="cart-qty-figure">2</span></span>
           <span class="down-chevron no-t-m">
             <svg class="icon-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
                 <g>
@@ -77,11 +112,79 @@
             </svg>
           </span>
         </div>
-        <div class="header-cart-info no-disp">
+        <div class="header-cart-info-empty no-disp">
           <p class="header-cart-info-para">
             Honger? Ga snel naar onze gerechten en kies een lekkere maaltijd.
           </p>
           <a class="header-cart-info-btn" href="#">SHOPPEN</a>
+        </div>
+        <div class="header-cart-info no-disp">
+          <h4>Uw winkelmandje</h4>
+          <div class="header-cart-items">
+            <div class="header-cart-item">
+              <div class="header-cart-item-name">
+                Chicken Tikka Masala
+              </div>
+              <div class="header-cart-qty-delete flex-box">
+                <div class="chosen-dish-qty-and-price flex-box">
+                  <div class="chosen-dish-qty flex-box">
+                    <span class="qty-minus qty-controller">-</span>
+                    <span class="quantity" data-qty="1">1</span>
+                    <span class="qty-plus qty-controller">+</span>
+                  </div>
+                  <div class="chosen-dish-price">
+                    € 12,00
+                  </div>
+                </div>
+                <div class="header-cart-delete">
+                  <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  	 viewBox="0 0 60.167 60.167" style="enable-background:new 0 0 60.167 60.167;" xml:space="preserve">
+                  <path d="M54.5,11.667H39.88V3.91c0-2.156-1.754-3.91-3.91-3.91H24.196c-2.156,0-3.91,1.754-3.91,3.91v7.756H5.667
+                  	c-0.552,0-1,0.448-1,1s0.448,1,1,1h2.042v40.5c0,3.309,2.691,6,6,6h32.75c3.309,0,6-2.691,6-6v-40.5H54.5c0.552,0,1-0.448,1-1
+                  	S55.052,11.667,54.5,11.667z M22.286,3.91c0-1.053,0.857-1.91,1.91-1.91H35.97c1.053,0,1.91,0.857,1.91,1.91v7.756H22.286V3.91z
+                  	 M50.458,54.167c0,2.206-1.794,4-4,4h-32.75c-2.206,0-4-1.794-4-4v-40.5h40.75V54.167z M38.255,46.153V22.847c0-0.552,0.448-1,1-1
+                  	s1,0.448,1,1v23.306c0,0.552-0.448,1-1,1S38.255,46.706,38.255,46.153z M29.083,46.153V22.847c0-0.552,0.448-1,1-1s1,0.448,1,1
+                  	v23.306c0,0.552-0.448,1-1,1S29.083,46.706,29.083,46.153z M19.911,46.153V22.847c0-0.552,0.448-1,1-1s1,0.448,1,1v23.306
+                  	c0,0.552-0.448,1-1,1S19.911,46.706,19.911,46.153z"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="header-cart-item">
+              <div class="header-cart-item-name">
+                Chicken Tikka Masala
+              </div>
+              <div class="header-cart-qty-delete flex-box">
+                <div class="chosen-dish-qty-and-price flex-box">
+                  <div class="chosen-dish-qty flex-box">
+                    <span class="qty-minus qty-controller">-</span>
+                    <span class="quantity" data-qty="1">1</span>
+                    <span class="qty-plus qty-controller">+</span>
+                  </div>
+                  <div class="chosen-dish-price">
+                    € 12,00
+                  </div>
+                </div>
+                <div class="header-cart-delete">
+                  <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  	 viewBox="0 0 60.167 60.167" style="enable-background:new 0 0 60.167 60.167;" xml:space="preserve">
+                  <path d="M54.5,11.667H39.88V3.91c0-2.156-1.754-3.91-3.91-3.91H24.196c-2.156,0-3.91,1.754-3.91,3.91v7.756H5.667
+                  	c-0.552,0-1,0.448-1,1s0.448,1,1,1h2.042v40.5c0,3.309,2.691,6,6,6h32.75c3.309,0,6-2.691,6-6v-40.5H54.5c0.552,0,1-0.448,1-1
+                  	S55.052,11.667,54.5,11.667z M22.286,3.91c0-1.053,0.857-1.91,1.91-1.91H35.97c1.053,0,1.91,0.857,1.91,1.91v7.756H22.286V3.91z
+                  	 M50.458,54.167c0,2.206-1.794,4-4,4h-32.75c-2.206,0-4-1.794-4-4v-40.5h40.75V54.167z M38.255,46.153V22.847c0-0.552,0.448-1,1-1
+                  	s1,0.448,1,1v23.306c0,0.552-0.448,1-1,1S38.255,46.706,38.255,46.153z M29.083,46.153V22.847c0-0.552,0.448-1,1-1s1,0.448,1,1
+                  	v23.306c0,0.552-0.448,1-1,1S29.083,46.706,29.083,46.153z M19.911,46.153V22.847c0-0.552,0.448-1,1-1s1,0.448,1,1v23.306
+                  	c0,0.552-0.448,1-1,1S19.911,46.706,19.911,46.153z"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <a class="header-cart-info-btn" href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="23.5" height="22.75" viewBox="0 0 23.5 22.75"><defs><style>.a-icon-shopping-cart,.b-icon-shopping-cart{fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;}.a-icon-shopping-cart{stroke-width:2px;}.b-icon-shopping-cart{stroke-width:1.5px;}</style></defs><g transform="translate(-0.25 -0.25)"><circle class="a-icon-shopping-cart" cx="1" cy="1" r="1" transform="translate(8 20)"/><circle class="a-icon-shopping-cart" cx="1" cy="1" r="1" transform="translate(19 20)"/><path class="b-icon-shopping-cart" d="M1,1H5L7.68,14.39a2,2,0,0,0,2,1.61H19.4a2,2,0,0,0,2-1.61L23,6H6"/></g></svg>
+            SHOPPEN
+          </a>
         </div>
       </div>
     </div>

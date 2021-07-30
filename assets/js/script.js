@@ -202,3 +202,13 @@ let act = document.querySelectorAll(".accordion.active");
           $(".announcement-bar").addClass('new-color');
         }
       });
+
+      $('.menu-drawer-cart .up-chevron').click(function() {
+        $('.shop-collection-right').addClass('open');
+        $('body').addClass('no-scroll');
+      });
+
+      $('.cart-close-text').click(function() {
+        $('.shop-collection-right').removeClass('open');
+        $('body').removeClass('no-scroll');
+      });

@@ -1,0 +1,40 @@
+<div class="newsletter-signup-section">
+  <div class="newsletter-content container">
+    <h2 class="newsletter-heading">Schrijf je in on onze nieuwsbrief en ontvang 10% korting op je eerste bestelling</h2>
+    <p class="newsletter-text">Geen spam, wel als eerste het nieuwe menu in je mailbox</p>
+    <form class="newsletter-form" action="index.html" method="post">
+      <div class="newsletter-email flex-box">
+        <input class="check-if-input answer-email-input" type="email" name="" value="" placeholder="E-mailadres">
+        <input type="submit" class="check-if-submit-btn" name="" value="Inschrijven">
+      </div>
+      <div class="checkbox">
+        <div class="checkbox-1">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" style="width: 22px;"><defs><style>.svg-check-a{fill:#fff;}.svg-check-a,.svg-check-b{stroke:var(--leaf-green-color);stroke-width:2px;}.svg-check-b,.svg-check-d{fill:none;}.svg-check-b{stroke-linecap:round;stroke-linejoin:round;}.svg-check-c{stroke:none;}</style></defs><g class="svg-check-a"><rect class="svg-check-c" width="32" height="32"></rect><rect class="svg-check-d" x="1" y="1" width="30" height="30"></rect></g><path class="svg-check-b" d="M2279.346,1602.008v6.359h11.607" transform="translate(-2735.032 494.658) rotate(-45)"></path></svg>
+        </div>
+        <div class="checkbox-2">
+          Ik ga ermee akkoord dat mijn gegevens verwerkt worden conform de privacyverklaring
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script>
+
+  jQuery(function ($) {
+    $('.checkbox').click(function(){
+      	$(this).removeClass("no-check");
+    	$(this).toggleClass("check");
+    });
+    //form submit handler
+    $('form').submit(function (e) {
+      //check atleat 1 checkbox is checked
+      if (!$(".checkbox").hasClass('check')) {
+        //prevent the default form submit if it is not checked
+        e.preventDefault();
+      	$(".checkbox").addClass("no-check");
+      }
+    })
+  });
+
+</script>
