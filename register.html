@@ -122,6 +122,12 @@ layout: default
     $(this).prev().prop("checked", true);
   });
 
+  $('.radio-label').click(function() {
+    $('.radio-span').removeClass('selected');
+    $(this).prev().addClass('selected');
+    $(this).prev().prev().prop("checked", true);
+  });
+
   jQuery(function ($) {
     $('.checkbox').click(function(){
       	$(this).removeClass("no-check");

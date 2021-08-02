@@ -190,20 +190,20 @@
 .slick-next:hover:before
 {
   opacity: 1;
-  content: url("/assets/icons/Arrow in cirkle.svg") !important;
+  content: url("/rosemary_theme/static/icons/Arrow in cirkle.svg") !important;
 }
 
 .date-selector .slick-prev:hover:before,
 .date-selector .slick-next:hover:before
 {
   opacity: 1;
-  content: url("/assets/icons/icon-left-chevron.svg")!important;
+  content: url("/rosemary_theme/static/icons/icon-left-chevron.svg")!important;
 }
 .product-info-left .slick-prev:hover:before,
 .product-info-left .slick-next:hover:before
 {
   opacity: 1;
-  content: url("/assets/icons/Arrow in cirkle.svg") !important;
+  content: url("/rosemary_theme/static/icons/Arrow in cirkle.svg") !important;
 }
 .slick-prev.slick-disabled:before,
 .slick-next.slick-disabled:before
@@ -238,12 +238,12 @@
 }
 .slick-prev:before
 {
-  content: url("/assets/icons/Arrow in cirkle.svg");
+  content: url("/rosemary_theme/static/icons/Arrow in cirkle.svg");
 }
 
 .date-selector .slick-prev:before
 {
-  content: url("/assets/icons/icon-left-chevron.svg");
+  content: url("/rosemary_theme/static/icons/icon-left-chevron.svg");
   display: inline-block;
     transform: rotate(-90deg);
     padding: 8px;
@@ -253,7 +253,7 @@
 
 .date-selector .slick-next:before
 {
-  content: url("/assets/icons/icon-left-chevron.svg");
+  content: url("/rosemary_theme/static/icons/icon-left-chevron.svg");
   display: inline-block;
     transform: rotate(-90deg);
     padding-right: 2px;
@@ -264,11 +264,11 @@
 
 .product-info-left .slick-prev:before
 {
-  content: url("/assets/icons/Arrow in cirkle.svg");
+  content: url("/rosemary_theme/static/icons/Arrow in cirkle.svg");
 }
 [dir='rtl'] .slick-prev:before
 {
-  content: url("/assets/icons/Arrow in cirkle.svg");
+  content: url("/rosemary_theme/static/icons/Arrow in cirkle.svg");
 }
 
 .slick-next
@@ -283,11 +283,11 @@
 
 .slick-next:before
 {
-  content: url("/assets/icons/Arrow in cirkle.svg");
+  content: url("/rosemary_theme/static/icons/Arrow in cirkle.svg");
 }
 [dir='rtl'] .slick-next:before
 {
-  content: url("/assets/icons/Arrow in cirkle.svg");
+  content: url("/rosemary_theme/static/icons/Arrow in cirkle.svg");
   -webkit-transform: rotateY(180deg) translate(0, -50%);
   -ms-transform: rotateY(180deg) translate(0, -50%);
   transform: rotateY(180deg) translate(0, -50%);
@@ -295,12 +295,12 @@
 
 .product-info-left .slick-next:before
 {
-  content: url("/assets/icons/Arrow in cirkle.svg");
+  content: url("/rosemary_theme/static/icons/Arrow in cirkle.svg");
 }
 
 [dir='rtl'] .product-info-left .slick-next:before
 {
-  content: url("/assets/icons/Arrow in cirkle.svg");
+  content: url("/rosemary_theme/static/icons/Arrow in cirkle.svg");
   -webkit-transform: rotateY(180deg) translate(0, -50%);
   -ms-transform: rotateY(180deg) translate(0, -50%);
   transform: rotateY(180deg) translate(0, -50%);

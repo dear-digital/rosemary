@@ -132,6 +132,21 @@ layout: default
 
 <script>
 
+  $('.radio-label').click(function() {
+    $('.radio-span').removeClass('selected');
+    $(this).prev().addClass('selected');
+    $(this).prev().prev().prop("checked", true);
+    var data_val = $(this).prev().data('value');
+    if(data_val == 'Particulier') {
+      $('.personal-contact-details').removeClass('no-disp');
+      $('.company-details').addClass('no-disp');
+    }
+    else {
+      $('.personal-contact-details').addClass('no-disp');
+      $('.company-details').removeClass('no-disp');
+    }
+  });
+
   $('.radio-span').click(function() {
     $('.radio-span').removeClass('selected');
     $(this).addClass('selected');
