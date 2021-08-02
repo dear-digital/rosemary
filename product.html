@@ -13,16 +13,16 @@ layout: default
     <div class="product-img-info-section flex-box">
       <div class="product-img-section">
         <div class="product-imgs">
-          <img src="/assets/imgs/food-item.png" alt="">
-          <img src="/assets/imgs/food-item.png" alt="">
-          <img src="/assets/imgs/food-item.png" alt="">
+          <img src="/rosemary_theme/static/imgs/food-item.png" alt="" />
+          <img src="/rosemary_theme/static/imgs/food-item.png" alt="" />
+          <img src="/rosemary_theme/static/imgs/food-item.png" alt="" />
         </div>
         <div class="product-page-upsell flex-box no-t-m">
           <div class="product-page-upsell-block">
             <p class="upsell-text">Combineer met:</p>
             <div class="upsell-img-info flex-box">
               <div class="upsell-img">
-                <img src="/assets/imgs/food-item.png" alt="">
+                <img src="/rosemary_theme/static/imgs/food-item.png" alt="" />
               </div>
               <div class="upsell-info">
                 <div class="upsell-item-name-price flex-box">
@@ -44,7 +44,7 @@ layout: default
             <p class="upsell-text">Combineer met:</p>
             <div class="upsell-img-info flex-box">
               <div class="upsell-img">
-                <img src="/assets/imgs/food-item.png" alt="">
+                <img src="/rosemary_theme/static/imgs/food-item.png" alt="" />
               </div>
               <div class="upsell-info">
                 <div class="upsell-item-name-price flex-box">
@@ -215,7 +215,7 @@ layout: default
     <h1 class="this-week-popular-heading">Populaire gerechten deze week:</h1>
     <div class="this-week-popular-dishes flex-box">
       <div class="shop-collection-product-card">
-        <img src="/assets/imgs/food-item.png" alt="">
+        <img src="/rosemary_theme/static/imgs/food-item.png" alt="" />
         <div class="product-info">
           <div class="product-name">
             Indisch gemarineerde kip: Chicken Tikka Masala
@@ -247,7 +247,7 @@ layout: default
         </div>
       </div>
       <div class="shop-collection-product-card">
-        <img src="/assets/imgs/food-item.png" alt="">
+        <img src="/rosemary_theme/static/imgs/food-item.png" alt="" />
         <div class="product-info">
           <div class="product-name">
             Indisch gemarineerde kip: Chicken Tikka Masala
@@ -279,7 +279,7 @@ layout: default
         </div>
       </div>
       <div class="shop-collection-product-card">
-        <img src="/assets/imgs/food-item.png" alt="">
+        <img src="/rosemary_theme/static/imgs/food-item.png" alt="" />
         <div class="product-info">
           <div class="product-name">
             Indisch gemarineerde kip: Chicken Tikka Masala
@@ -311,7 +311,7 @@ layout: default
         </div>
       </div>
       <div class="shop-collection-product-card">
-        <img src="/assets/imgs/food-item.png" alt="">
+        <img src="/rosemary_theme/static/imgs/food-item.png" alt="" />
         <div class="product-info">
           <div class="product-name">
             Indisch gemarineerde kip: Chicken Tikka Masala
@@ -419,22 +419,22 @@ layout: default
           </div>
           <div class="review-images no-t-m flex-box">
             <div class="review-img">
-              <img src="/assets/imgs/food-item.png" alt="">
+              <img src="/rosemary_theme/static/imgs/food-item.png" alt="" />
             </div>
             <div class="review-img">
-              <img src="/assets/imgs/food-item.png" alt="">
+              <img src="/rosemary_theme/static/imgs/food-item.png" alt="" />
             </div>
             <div class="review-img">
-              <img src="/assets/imgs/food-item.png" alt="">
+              <img src="/rosemary_theme/static/imgs/food-item.png" alt="" />
             </div>
             <div class="review-img">
-              <img src="/assets/imgs/food-item.png" alt="">
+              <img src="/rosemary_theme/static/imgs/food-item.png" alt="" />
             </div>
             <div class="review-img">
-              <img src="/assets/imgs/food-item.png" alt="">
+              <img src="/rosemary_theme/static/imgs/food-item.png" alt="" />
             </div>
             <div class="review-img">
-              <img src="/assets/imgs/food-item.png" alt="">
+              <img src="/rosemary_theme/static/imgs/food-item.png" alt="" />
             </div>
           </div>
           <div class="write-review-btn no-t-m">
@@ -553,22 +553,6 @@ layout: default
     </div>
   </div>
 
-  <div class="newsletter-signup-section">
-    <div class="newsletter-content container">
-      <h2 class="newsletter-heading">Schrijf je in on onze nieuwsbrief en ontvang 10% korting op je eerste bestelling</h2>
-      <p class="newsletter-text">Geen spam, wel als eerste het nieuwe menu in je mailbox</p>
-      <form class="newsletter-form" action="index.html" method="post">
-        <div class="newsletter-email flex-box">
-          <input class="check-if-input answer-email-input" type="email" name="" value="" placeholder="E-mailadres">
-          <input type="submit" class="check-if-submit-btn" name="" value="Inschrijven">
-        </div>
-        <div class="agreement-checkbox flex-box">
-          <input id="agreement" class="no-disp" type="checkbox" name="" value="agreed">
-          <span class="check-box"><span class="checked"></span></span>
-          <label class="agreement-label" for="agreement">Ik ga ermee akkoord dat mijn gegevens verwerkt worden conform de privacyverklaring</label>
-        </div>
-      </form>
-    </div>
-  </div>
+  {% include newsletter.html %}
 
 </div>

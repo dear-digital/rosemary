@@ -269,13 +269,50 @@ display: flex;
   border-radius: 8px;
   position: relative;
 }
+.popup-register .popup{
+  padding: 40px 64px;
+}
+.popup-register h2 {
+  margin-bottom: 40px;
+}
+.text-left {
+    text-align: left;
+}
 .popup-text {
   max-width: 470px;
   text-align: center;
   margin: 0 auto;
 }
+.popup-register .popup-text {
+  max-width: none;
+  margin: 0;
+}
 .popup-text p {
 font-weight: 300;
+}
+
+.popup-register .checkbox{
+  max-width: 224px;
+  font-size: var(--medium);
+  color: var(--main-color);
+  margin-bottom: var(--xxlarge);
+}
+
+.popup-register .choose-password {
+    font-weight: 500;
+}
+
+.popup-register .login-form input {
+    width: 50%;
+}
+
+.popup-register .login-text{
+  font-weight: 600;
+}
+
+.popup-register .login-form-btns{
+  margin-top: 40px;
+  justify-content: center;
 }
 
 .registered-popup-wrapper .popup{
@@ -1127,6 +1164,7 @@ span.bike-line {
     border: 1px solid;
     border-radius: var(--xxsmall);
     margin: 0 5px 5px;
+    width: fit-content;
 }
 
 .shop-collection-product-card .add-to-cart {
@@ -3156,6 +3194,24 @@ margin-bottom: -60px;
   width: 100%;
 }
 
+.register-form .check-location{
+  width: 200px;
+}
+
+.delivery-positive {
+    padding: 19px 0;
+    width: 200px;
+    text-align: center;
+    display: inline-block;
+    background-color: var(--light-green-color);
+    border-radius: var(--xxsmall);
+    font-weight: 600;
+    margin-left: var(--medium);
+}
+
+.login-btn.inactive {
+  background-color: var(--inactive-light-color);
+}
 
 
 /*
@@ -4493,6 +4549,15 @@ span.bike-line {
   overflow-y: scroll;
   position: fixed;
   padding-top: 40%;
+}
+
+.register-form .check-location, .delivery-positive {
+  width: 48%;
+    max-width: 200px;
+}
+
+.delivery-positive {
+  margin-left: 2%;
 }
 
 }

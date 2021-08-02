@@ -23,9 +23,9 @@ layout: default
   <div class="check-if-content container flex-box">
     <p class="check-if-para">Leveren we in jouw straat?</p>
     <form class="check-if-form" action="index.html" method="post">
-      <input class="check-if-input" type="number" name="" value="" placeholder="Postcode">
-      <input class="check-if-input" type="text" name="" value="" placeholder="Straat">
-      <input type="submit" class="check-if-submit-btn" name="" value="Controleer">
+      <input class="check-if-input" type="number" name="" value="" placeholder="Postcode" />
+      <input class="check-if-input" type="text" name="" value="" placeholder="Straat" />
+      <input type="submit" class="check-if-submit-btn" name="" value="Controleer" />
     </form>
   </div>
 </div>
@@ -90,7 +90,7 @@ layout: default
 
 
         <div class="shop-collection-product-card">
-          <img src="/assets/imgs/food-item.png" alt="">
+          <img src="/rosemary_theme/static/imgs/food-item.png" alt="" />
           <div class="product-info">
             <div class="product-name">
               Indisch gemarineerde kip: Chicken Tikka Masala
@@ -123,7 +123,7 @@ layout: default
         </div>
 
         <div class="shop-collection-product-card">
-          <img src="/assets/imgs/food-item.png" alt="">
+          <img src="/rosemary_theme/static/imgs/food-item.png" alt="" />
           <div class="product-info">
             <div class="product-name">
               Indisch gemarineerde kip: Chicken Tikka Masala
@@ -156,7 +156,7 @@ layout: default
         </div>
 
         <div class="shop-collection-product-card">
-          <img src="/assets/imgs/food-item.png" alt="">
+          <img src="/rosemary_theme/static/imgs/food-item.png" alt="" />
           <div class="product-info">
             <div class="product-name">
               Indisch gemarineerde kip: Chicken Tikka Masala
@@ -189,7 +189,7 @@ layout: default
         </div>
 
         <div class="shop-collection-product-card">
-          <img src="/assets/imgs/food-item.png" alt="">
+          <img src="/rosemary_theme/static/imgs/food-item.png" alt="" />
           <div class="product-info">
             <div class="product-name">
               Indisch gemarineerde kip: Chicken Tikka Masala
@@ -222,7 +222,7 @@ layout: default
         </div>
 
         <div class="shop-collection-product-card">
-          <img src="/assets/imgs/food-item.png" alt="">
+          <img src="/rosemary_theme/static/imgs/food-item.png" alt="" />
           <div class="product-info">
             <div class="product-name">
               Indisch gemarineerde kip: Chicken Tikka Masala
@@ -311,23 +311,7 @@ layout: default
 
 {% include instagram.html %}
 
-<div class="newsletter-signup-section">
-  <div class="newsletter-content container">
-    <h2 class="newsletter-heading">Schrijf je in on onze nieuwsbrief en ontvang 10% korting op je eerste bestelling</h2>
-    <p class="newsletter-text">Geen spam, wel als eerste het nieuwe menu in je mailbox</p>
-    <form class="newsletter-form" action="index.html" method="post">
-      <div class="newsletter-email flex-box">
-        <input class="check-if-input answer-email-input" type="email" name="" value="" placeholder="E-mailadres">
-        <input type="submit" class="check-if-submit-btn" name="" value="Inschrijven">
-      </div>
-      <div class="agreement-checkbox flex-box">
-        <input id="agreement" class="no-disp" type="checkbox" name="" value="agreed">
-        <span class="check-box"><span class="checked"></span></span>
-        <label class="agreement-label" for="agreement">Ik ga ermee akkoord dat mijn gegevens verwerkt worden conform de privacyverklaring</label>
-      </div>
-    </form>
-  </div>
-</div>
+{% include newsletter.html %}
 
 <script>
 

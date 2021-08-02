@@ -1,0 +1,130 @@
+<section class="popup-wrapper popup-register">
+  <div class="popup">
+    <div class="popup-close no-m">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22.629" height="22.629" viewBox="0 0 22.629 22.629"><defs><style>.svg-close{fill:none;stroke:#152018;stroke-linecap:round;stroke-linejoin:round;stroke-width:4px;}</style></defs><g transform="translate(-133.642 -559.322) rotate(45)"><line class="svg-close" y2="24" transform="translate(506 289)"></line><line class="svg-close" x2="24" transform="translate(494 301.002)"></line></g></svg>
+    </div>
+    <div class="popup-text">
+      <h2>Registreren</h2>
+      <div class="text-left">
+        <p class="login-text">Controleer jouw gegevens</p>
+        <p class="login-text">Type bestelling:</p>
+        <form class="login-form" action="index.html" method="post">
+          <input type="radio" id="private" class="no-disp" name="type-of-order" value="Particulier" />
+          <span class="radio-span selected" data-value="Particulier"><span class="selected-radio"></span></span>
+          <label class="radio-label" for="private">Particulier</label>
+          <input type="radio" id="commercial" class="no-disp" name="type-of-order" value="Zakelijk" />
+          <span class="radio-span" data-value="Zakelijk"><span class="selected-radio"></span></span>
+          <label class="radio-label" for="commercial">Zakelijk</label>
+          <div class="contact-details-heading flex-box">
+            <p  class="login-text">Contactgegevens</p>
+            <p class="edit">Wijzig</p>
+          </div>
+          <div class="personal-contact-details contact-details-text">
+            <p class="details-para">Laura@bombay-studio.com</p>
+            <p class="details-para">0412 34 56 78</p>
+          </div>
+          <div class="company-details no-disp">
+            <div class="company-contact-details contact-details-text">
+              <p class="details-para">Laura@bombay-studio.com</p>
+              <p class="details-para">0412 34 56 78</p>
+              <p class="details-para">Bedrijfsnaam</p>
+              <p class="details-para">BTW nummer</p>
+            </div>
+            <div class="refrence-title">
+              <span class="refrence">Referentie</span>
+              <span class="optional"> - Optioneel</span>
+            </div>
+            <input id="refrence" class="" type="text" name="" value="" placeholder="" />
+            <p class="refrence-text">
+              Een nummer of code die je kunt meegeven voor eigen administratie. Dit wordt vermeld in je bestelbevestiging.
+            </p>
+          </div>
+          <div class="contact-details-heading flex-box">
+            <p  class="login-text">Contactgegevens</p>
+            <p class="edit">Wijzig</p>
+          </div>
+          <div class="personal-contact-details contact-details-text">
+            <p class="details-para">laura Touchant</p>
+            <p class="details-para">Straatnaam nr toev. Bus</p>
+            <p class="details-para">Postcode, gemeente</p>
+          </div>
+          <p class="login-text">Factuuradres</p>
+          <div class="checkbox">
+            <div class="checkbox-1">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" style="width: 22px;"><defs><style>.svg-check-a{fill:#fff;}.svg-check-a,.svg-check-b{stroke:var(--leaf-green-color);stroke-width:2px;}.svg-check-b,.svg-check-d{fill:none;}.svg-check-b{stroke-linecap:round;stroke-linejoin:round;}.svg-check-c{stroke:none;}</style></defs><g class="svg-check-a"><rect class="svg-check-c" width="32" height="32"></rect><rect class="svg-check-d" x="1" y="1" width="30" height="30"></rect></g><path class="svg-check-b" d="M2279.346,1602.008v6.359h11.607" transform="translate(-2735.032 494.658) rotate(-45)"></path></svg>
+            </div>
+            <div class="checkbox-2">
+              Zelfde als leveringsadres
+            </div>
+          </div>
+          <p class="choose-password">Kies een wachtwoord</p>
+          <input id="password" type="password" name="" value="" placeholder="Vul je wachtwoord in" />
+          <span id="password-wrapper-correct" class="input-wrapper input-wrapper-correct no-disp"></span>
+          <span id="password-wrapper-wrong" class="input-wrapper input-wrapper-wrong no-disp"></span>
+          <p class="password-terms">Min. 8 karakters, 1 cijfer en 1 speciaal teken.</p>
+          <div class="login-form-btns flex-box">
+            <a href="#" class="login-btn inactive">Registreren</a>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="popup-close popup-close-bottom no-d">
+      Sluiten <svg xmlns="http://www.w3.org/2000/svg" width="22.629" height="22.629" viewBox="0 0 22.629 22.629"><defs><style>.svg-close{fill:none;stroke:#152018;stroke-linecap:round;stroke-linejoin:round;stroke-width:4px;}</style></defs><g transform="translate(-133.642 -559.322) rotate(45)"><line class="svg-close" y2="24" transform="translate(506 289)"></line><line class="svg-close" x2="24" transform="translate(494 301.002)"></line></g></svg>
+    </div>
+  </div>
+</section>
+
+<script>
+  $('body').addClass('no-scroll');
+  $('.popup-close').click( function(){
+    $(this).closest('.popup-wrapper').hide();
+    $('body').removeClass('no-scroll');
+  });
+
+  $('.radio-span').click(function() {
+    $('.radio-span').removeClass('selected');
+    $(this).addClass('selected');
+    $(this).prev().prop("checked", true);
+    var data_val = $(this).data('value');
+    if(data_val == 'Particulier') {
+      $('.personal-contact-details').removeClass('no-disp');
+      $('.company-details').addClass('no-disp');
+    }
+    else {
+      $('.personal-contact-details').addClass('no-disp');
+      $('.company-details').removeClass('no-disp');
+    }
+  });
+
+
+
+  function hasNumber(myString) {
+    return /\d/.test(myString);
+  }
+
+  function validatePwd(pwd) {
+    var pwd_len = pwd.length;
+    if (pwd_len > 7) {
+      if(hasNumber(pwd)) {
+        if(/^[a-zA-Z0-9- ]*$/.test(pwd) == false) {
+          return true;
+        }
+      }
+    }
+  }
+
+  $('input').click(function() {
+    var pwdhasFocus = $('#password').is(':focus');
+    if(!pwdhasFocus) {
+      var pwd = $("#password").val();
+      if(validatePwd(pwd)) {
+        $('#password-wrapper-wrong').addClass('no-disp');
+        $('#password-wrapper-correct').removeClass('no-disp');
+        }
+        else {
+          $('#password-wrapper-correct').addClass('no-disp');
+          $('#password-wrapper-wrong').removeClass('no-disp');
+        }
+    }
+  });
+</script>

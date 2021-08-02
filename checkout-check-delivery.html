@@ -1,0 +1,369 @@
+---
+layout: default
+---
+
+<div class="checkout-page">
+  <div class="checkout-page-content flex-box container">
+    <div class="checkout-page-left">
+      <h1>Jouw Rose-Mary bestelling</h1>
+      <div class="stages-number flex-box">
+        <div class="stage-number current-stage">
+          1
+        </div>
+        <div class="stage-number">
+          2
+        </div>
+        <div class="stage-number">
+          3
+        </div>
+        <span class="loading-bar">
+          <span class="loading-complete" data-complete="0"></span>
+        </span>
+      </div>
+
+      <div class="stages-name flex-box">
+        <div class="stage-name">
+          Gegevens
+        </div>
+        <div class="stage-name">
+          Levering
+        </div>
+        <div class="stage-name">
+          Afrekenen
+        </div>
+      </div>
+      <form class="register-form" action="index.html" method="post">
+          <p class="login-text">Leveren we in jouw straat?</p>
+          <input id="location" class="check-location" type="number" name="" value="" />
+          <span id="check-location-wrapper-correct" class="input-wrapper input-wrapper-correct no-disp"></span>
+          <span id="check-location-wrapper-wrong" class="input-wrapper input-wrapper-wrong no-disp"></span>
+          <span class="delivery-positive">Yes!</span>
+      <p class="credentials">Inloggegevens</p>
+      <div class="half-size-inputs flex-box">
+        <div class="email half-width">
+          <label for="email">E-mailadres</label>
+          <input id="email" class="" type="email" name="" value="" placeholder="Vul je e-mailadres in" />
+          <span id="email-wrapper-correct" class="input-wrapper input-wrapper-correct no-disp"></span>
+          <span id="email-wrapper-wrong" class="input-wrapper input-wrapper-wrong no-disp"></span>
+        </div>
+        <div class="password half-width">
+          <label for="password">Kies een wachtwoord</label>
+          <input id="password" class="" type="password" name="" value="" placeholder="Vul je wachtwoord in" />
+          <span id="password-wrapper-correct" class="input-wrapper input-wrapper-correct no-disp"></span>
+          <span id="password-wrapper-wrong" class="input-wrapper input-wrapper-wrong no-disp"></span>
+          <p class="password-terms">Min. 8 karakters, 1 cijfer en 1 speciaal teken.</p>
+        </div>
+      </div>
+      <p class="credentials">Bestelgegevens</p>
+      <p class="credentials">Type bestelling</p>
+      <input type="radio" id="private" class="no-disp" name="type-of-order" value="Particulier" />
+      <span class="radio-span selected" data-value="Particulier"><span class="selected-radio"></span></span>
+      <label class="radio-label" for="private">Particulier</label>
+      <input type="radio" id="commercial" class="no-disp" name="type-of-order" value="Zakelijk" />
+      <span class="radio-span" data-value="Zakelijk"><span class="selected-radio"></span></span>
+      <label class="radio-label" for="commercial">Zakelijk</label>
+      <p class="credentials">Leveringsadres</p>
+      <div class="half-size-inputs flex-box">
+        <div class="first-name half-width">
+          <label for="first-name">Voornaam</label>
+          <input id="first-name" class="" type="text" name="" value="" placeholder="Voornaam" />
+          <span id="first-name-wrapper-correct" class="input-wrapper input-wrapper-correct no-disp"></span>
+          <span id="first-name-wrapper-wrong" class="input-wrapper input-wrapper-wrong no-disp"></span>
+        </div>
+        <div class="name half-width">
+          <label for="name">Naam</label>
+          <input id="name" class="" type="text" name="" value="" placeholder="Naam" />
+          <span id="name-wrapper-correct" class="input-wrapper input-wrapper-correct no-disp"></span>
+          <span id="name-wrapper-wrong" class="input-wrapper input-wrapper-wrong no-disp"></span>
+        </div>
+      </div>
+      <div class="half-size-inputs flex-box">
+        <div class="street-name half-width">
+          <label for="street-name">Straatnaam</label>
+          <input id="street-name" class="" type="text" name="" value="" placeholder="Straatnaam" />
+          <span id="street-wrapper-correct" class="input-wrapper input-wrapper-correct no-disp"></span>
+          <span id="street-wrapper-wrong" class="input-wrapper input-wrapper-wrong no-disp"></span>
+        </div>
+        <div class="house-number flex-box half-width">
+          <div class="one-third">
+            <label for="house-number">Huisnummer</label>
+            <input id="house-number" class="" type="text" name="" value="" placeholder="Nr" />
+            <span id="house-no-wrapper-correct" class="input-wrapper input-wrapper-correct no-disp"></span>
+            <span id="house-no-wrapper-wrong" class="input-wrapper input-wrapper-wrong no-disp"></span>
+          </div>
+          <div class="one-third">
+            <input id="address" class="" type="text" name="" value="" placeholder="Toev." />
+          </div>
+          <div class="one-third">
+            <label for="bus-number">Busnr</label>
+            <input id="bus-number" class="" type="text" name="" value="" />
+          </div>
+        </div>
+      </div>
+      <div class="half-size-inputs flex-box">
+        <div class="postcode half-width">
+          <label for="postcode">Postcode</label>
+          <input id="postcode" class="" type="number" name="" value="" placeholder="Postcode" />
+          <span id="postcode-wrapper-correct" class="input-wrapper input-wrapper-correct no-disp"></span>
+          <span id="postcode-wrapper-wrong" class="input-wrapper input-wrapper-wrong no-disp"></span>
+        </div>
+        <div class="township half-width">
+          <label for="township">Gemeente</label>
+          <input id="township" class="" type="text" name="" value="" placeholder="Gemeente" />
+          <span id="township-wrapper-correct" class="input-wrapper input-wrapper-correct no-disp"></span>
+          <span id="township-wrapper-wrong" class="input-wrapper input-wrapper-wrong no-disp"></span>
+        </div>
+      </div>
+      <p class="credentials">Factuuradres</p>
+      <div class="checkbox">
+        <div class="checkbox-1">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" style="width: 22px;"><defs><style>.svg-check-a{fill:#fff;}.svg-check-a,.svg-check-b{stroke:var(--leaf-green-color);stroke-width:2px;}.svg-check-b,.svg-check-d{fill:none;}.svg-check-b{stroke-linecap:round;stroke-linejoin:round;}.svg-check-c{stroke:none;}</style></defs><g class="svg-check-a"><rect class="svg-check-c" width="32" height="32"></rect><rect class="svg-check-d" x="1" y="1" width="30" height="30"></rect></g><path class="svg-check-b" d="M2279.346,1602.008v6.359h11.607" transform="translate(-2735.032 494.658) rotate(-45)"></path></svg>
+        </div>
+        <div class="checkbox-2">
+          Zelfde als leveringsadres
+        </div>
+    </div>
+    <div class="login-form-btns flex-box">
+      <a href="#" class="previous-step">Vorige stap</a>
+      <a href="#" class="login-btn inactive">Volgende*</a>
+    </div>
+  </form>
+
+    </div>
+
+    <div class="checkout-page-right no-t-m">
+      {% include right-cart.html %}
+    </div>
+  </div>
+  <div class="menu-drawer-cart no-d">
+    <div class="menu-drawer-mini-cart">
+      <div class="your-order-text-section flex-box">
+        <div class="your-order-text-part flex-box">
+          <div class="your-order-cart-svg">
+            <svg class="header-cart-svg" xmlns="http://www.w3.org/2000/svg" width="23.5" height="22.75" viewBox="0 0 23.5 22.75"><defs><style>.a-icon-shopping-cart-green,.b-icon-shopping-cart-green{fill:none;stroke:#38493d;stroke-linecap:round;stroke-linejoin:round;}.a-icon-shopping-cart-green{stroke-width:2px;}.b-icon-shopping-cart-green{stroke-width:1.5px;}</style></defs><g transform="translate(-0.25 -0.25)"><circle class="a-icon-shopping-cart-green" cx="1" cy="1" r="1" transform="translate(8 20)"/><circle class="a-icon-shopping-cart-green" cx="1" cy="1" r="1" transform="translate(19 20)"/><path class="b-icon-shopping-cart-green" d="M1,1H5L7.68,14.39a2,2,0,0,0,2,1.61H19.4a2,2,0,0,0,2-1.61L23,6H6"/></g></svg>
+          </div>
+          <div class="your-order-text">
+            Uw bestelling
+          </div>
+        </div>
+        <div class="text-separator-pipe">
+          |
+        </div>
+        <div class="your-order-text-part flex-box">
+          3 gerechten
+        </div>
+        <div class="text-separator-pipe">
+          |
+        </div>
+        <div class="your-order-text-part flex-box">
+          <div class="your-order-text cart-total">
+            € 36,00
+          </div>
+          <div class="up-chevron">
+            <svg class="icon-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+                <g>
+                  <path d="m 21.365632,3.8463214 27.760611,-0.1607933 0.08747,-27.6872871 8.12143,-0.09916 -0.107135,35.888216 -35.940265,0.107799 z" transform="matrix(0.70421428,0.7099875,-0.70421428,0.7099875,0,0)"></path>
+                </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+
+  $('.radio-span').click(function() {
+    $('.radio-span').removeClass('selected');
+    $(this).addClass('selected');
+    $(this).prev().prop("checked", true);
+  });
+
+  jQuery(function ($) {
+    $('.checkbox').click(function(){
+      	$(this).removeClass("no-check");
+    	$(this).toggleClass("check");
+    });
+    //form submit handler
+    $('form').submit(function (e) {
+      //check atleat 1 checkbox is checked
+      if (!$(".checkbox").hasClass('check')) {
+        //prevent the default form submit if it is not checked
+        e.preventDefault();
+      	$(".checkbox").addClass("no-check");
+      }
+    })
+  });
+
+  function validateEmail(email) {
+    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+  }
+
+  function hasNumber(myString) {
+    return /\d/.test(myString);
+  }
+
+  function onlyNumber(string) {
+    return /^\d+$/.test(string);
+  }
+
+  function validatePwd(pwd) {
+    var pwd_len = pwd.length;
+    if (pwd_len > 7) {
+      if(hasNumber(pwd)) {
+        if(/^[a-zA-Z0-9- ]*$/.test(pwd) == false) {
+          return true;
+        }
+      }
+    }
+  }
+
+  function validateNumber(num) {
+    var num_len = num.length;
+    if (num_len > 0){
+      if(onlyNumber(num)) {
+        return true;
+      }
+    }
+  }
+
+  function validateName(string){
+    var string_len = string.length;
+    if (string_len > 0) {
+      if(!hasNumber(string)){
+        if(/^[a-zA-Z0-9- ]*$/.test(string) == true) {
+          return true;
+        }
+      }
+    }
+  }
+
+  function validateStreet(string){
+    var string_len = string.length;
+    if (string_len > 0) {
+      if(/^[a-zA-Z0-9- ]*$/.test(string) == true) {
+        return true;
+      }
+    }
+  }
+
+  $('input').click(function() {
+    var emailhasFocus = $('#email').is(':focus');
+    var pwdhasFocus = $('#password').is(':focus');
+    var firstNameFocus = $('#first-name').is(':focus');
+    var nameFocus = $('#name').is(':focus');
+    var streetFocus = $('#street-name').is(':focus');
+    var houseNumFocus = $('#house-number').is(':focus');
+    var postcodeFocus = $('#postcode').is(':focus');
+    var townshipFocus = $('#township').is(':focus');
+    var checkLocationFocus = $('#location').is(':focus');
+    if(!pwdhasFocus) {
+      var pwd = $("#password").val();
+      if(validatePwd(pwd)) {
+        $('#password-wrapper-wrong').addClass('no-disp');
+        $('#password-wrapper-correct').removeClass('no-disp');
+        }
+        else {
+          $('#password-wrapper-correct').addClass('no-disp');
+          $('#password-wrapper-wrong').removeClass('no-disp');
+        }
+    }
+    if(!emailhasFocus) {
+      var email = $("#email").val();
+
+      if(validateEmail(email)) {
+        $('#email-wrapper-wrong').addClass('no-disp');
+        $('#email-wrapper-correct').removeClass('no-disp');
+      }
+      else {
+        $('#email-wrapper-correct').addClass('no-disp');
+        $('#email-wrapper-wrong').removeClass('no-disp');
+      }
+    }
+    if(!firstNameFocus) {
+      var firstName = $("#first-name").val();
+      if(validateName(firstName)) {
+        $('#first-name-wrapper-wrong').addClass('no-disp');
+        $('#first-name-wrapper-correct').removeClass('no-disp');
+        }
+        else {
+          $('#first-name-wrapper-correct').addClass('no-disp');
+          $('#first-name-wrapper-wrong').removeClass('no-disp');
+        }
+    }
+    if(!nameFocus) {
+      var name = $("#name").val();
+      if(validateName(name)) {
+        $('#name-wrapper-wrong').addClass('no-disp');
+        $('#name-wrapper-correct').removeClass('no-disp');
+        }
+        else {
+          $('#name-wrapper-correct').addClass('no-disp');
+          $('#name-wrapper-wrong').removeClass('no-disp');
+        }
+    }
+    if(!streetFocus) {
+      var street = $("#street-name").val();
+      if(validateStreet(street)) {
+        $('#street-wrapper-wrong').addClass('no-disp');
+        $('#street-wrapper-correct').removeClass('no-disp');
+        }
+        else {
+          $('#street-wrapper-correct').addClass('no-disp');
+          $('#street-wrapper-wrong').removeClass('no-disp');
+        }
+    }
+    if(!houseNumFocus) {
+      var houseNum = $("#house-number").val();
+      if(validateNumber(houseNum)) {
+        $('#house-no-wrapper-wrong').addClass('no-disp');
+        $('#house-no-wrapper-correct').removeClass('no-disp');
+        }
+        else {
+          $('#house-no-wrapper-correct').addClass('no-disp');
+          $('#house-no-wrapper-wrong').removeClass('no-disp');
+        }
+    }
+    if(!postcodeFocus) {
+      var postcode = $("#postcode").val();
+      if(validateNumber(postcode)) {
+        $('#postcode-wrapper-wrong').addClass('no-disp');
+        $('#postcode-wrapper-correct').removeClass('no-disp');
+        }
+        else {
+          $('#postcode-wrapper-correct').addClass('no-disp');
+          $('#postcode-wrapper-wrong').removeClass('no-disp');
+        }
+    }
+    if(!townshipFocus) {
+      var township = $("#township").val();
+      if(validateName(township)) {
+        $('#township-wrapper-wrong').addClass('no-disp');
+        $('#township-wrapper-correct').removeClass('no-disp');
+        }
+        else {
+          $('#township-wrapper-correct').addClass('no-disp');
+          $('#township-wrapper-wrong').removeClass('no-disp');
+        }
+    }
+
+    if(!checkLocationFocus) {
+      var location = $("#location").val();
+      if(validateNumber(location)) {
+        $('#check-location-wrapper-wrong').addClass('no-disp');
+        $('#check-location-wrapper-correct').removeClass('no-disp');
+        }
+        else {
+          $('#check-location-wrapper-correct').addClass('no-disp');
+          $('#check-location-wrapper-wrong').removeClass('no-disp');
+        }
+    }
+  });
+
+
+
+
+
+</script>
