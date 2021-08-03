@@ -83,6 +83,59 @@ layout: default
             Zelfde als leveringsadres
           </div>
         </div>
+        <div class="register-left register-form open-when-unchecked">
+          <div class="half-size-inputs flex-box">
+            <div class="first-name half-width">
+              <label for="first-name">Voornaam</label>
+              <input id="first-name" class="" type="text" name="" value="" placeholder="Voornaam" />
+              <span id="first-name-wrapper-correct" class="input-wrapper input-wrapper-correct no-disp"></span>
+              <span id="first-name-wrapper-wrong" class="input-wrapper input-wrapper-wrong no-disp"></span>
+            </div>
+            <div class="name half-width">
+              <label for="name">Naam</label>
+              <input id="name" class="" type="text" name="" value="" placeholder="Naam" />
+              <span id="name-wrapper-correct" class="input-wrapper input-wrapper-correct no-disp"></span>
+              <span id="name-wrapper-wrong" class="input-wrapper input-wrapper-wrong no-disp"></span>
+            </div>
+          </div>
+          <div class="half-size-inputs flex-box">
+            <div class="street-name half-width">
+              <label for="street-name">Straatnaam</label>
+              <input id="street-name" class="" type="text" name="" value="" placeholder="Straatnaam" />
+              <span id="street-wrapper-correct" class="input-wrapper input-wrapper-correct no-disp"></span>
+              <span id="street-wrapper-wrong" class="input-wrapper input-wrapper-wrong no-disp"></span>
+            </div>
+            <div class="house-number flex-box half-width">
+              <div class="one-third">
+                <label for="house-number">Huisnummer</label>
+                <input id="house-number" class="" type="number" name="" value="" placeholder="Nr" />
+                <span id="house-no-wrapper-correct" class="input-wrapper input-wrapper-correct no-disp"></span>
+                <span id="house-no-wrapper-wrong" class="input-wrapper input-wrapper-wrong no-disp"></span>
+              </div>
+              <div class="one-third">
+                <input id="address" class="" type="text" name="" value="" placeholder="Toev." />
+              </div>
+              <div class="one-third">
+                <label for="bus-number">Busnr</label>
+                <input id="bus-number" class="" type="text" name="" value="" />
+              </div>
+            </div>
+          </div>
+          <div class="half-size-inputs flex-box">
+            <div class="postcode half-width">
+              <label for="postcode">Postcode</label>
+              <input id="postcode" class="" type="number" name="" value="" placeholder="Postcode" />
+              <span id="postcode-wrapper-correct" class="input-wrapper input-wrapper-correct no-disp"></span>
+              <span id="postcode-wrapper-wrong" class="input-wrapper input-wrapper-wrong no-disp"></span>
+            </div>
+            <div class="township half-width">
+              <label for="township">Gemeente</label>
+              <input id="township" class="" type="text" name="" value="" placeholder="Gemeente" />
+              <span id="township-wrapper-correct" class="input-wrapper input-wrapper-correct no-disp"></span>
+              <span id="township-wrapper-wrong" class="input-wrapper input-wrapper-wrong no-disp"></span>
+            </div>
+          </div>
+        </div>
         <div class="login-form-btns flex-box">
           <a href="/checkout" class="previous-step">Vorige stap</a>
           <a href="/checkout-loggedin-two" class="login-btn">Volgende</a>
@@ -166,6 +219,12 @@ layout: default
     $('.checkbox').click(function(){
       	$(this).removeClass("no-check");
     	$(this).toggleClass("check");
+      if($('.checkbox').hasClass('check')){
+        $('.open-when-unchecked').addClass('no-disp');
+      }
+      else{
+        $('.open-when-unchecked').removeClass('no-disp');
+      }
     });
     //form submit handler
     $('form').submit(function (e) {
@@ -177,5 +236,7 @@ layout: default
       }
     })
   });
+
+
 
 </script>
