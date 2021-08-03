@@ -62,7 +62,7 @@ layout: default
         </a>
         <div class="login-form-btns flex-box">
           <a href="#" class="previous-step">Vorige stap</a>
-          <a href="#" class="login-btn">Inloggen</a>
+          <a href="/checkout-loggedin" class="login-btn">Inloggen</a>
         </div>
       </form>
 
@@ -111,56 +111,6 @@ layout: default
 
 <script>
 
-  function validateEmail(email) {
-    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(email);
-  }
 
-  function hasNumber(myString) {
-    return /\d/.test(myString);
-  }
-
-  function validatePwd(pwd) {
-    var pwd_len = pwd.length;
-    if (pwd_len > 7) {
-      if(hasNumber(pwd)) {
-        if(/^[a-zA-Z0-9- ]*$/.test(pwd) == false) {
-          return true;
-        }
-      }
-    }
-  }
-
-  $('input').click(function() {
-    var emailhasFocus = $('#email').is(':focus');
-    var pwdhasFocus = $('#password').is(':focus');
-    if(!pwdhasFocus) {
-      var pwd = $("#password").val();
-      if(validatePwd(pwd)) {
-        $('#password-wrapper-wrong').addClass('no-disp');
-        $('#password-wrapper-correct').removeClass('no-disp');
-        $('.email-error-msg').addClass('no-disp');
-        }
-        else {
-          $('#password-wrapper-correct').addClass('no-disp');
-          $('#password-wrapper-wrong').removeClass('no-disp');
-          $('.email-error-msg').removeClass('no-disp');
-        }
-    }
-    if(!emailhasFocus) {
-      var email = $("#email").val();
-
-      if(validateEmail(email)) {
-        $('#email-wrapper-wrong').addClass('no-disp');
-        $('#email-wrapper-correct').removeClass('no-disp');
-        $('.password-error-msg').addClass('no-disp');
-      }
-      else {
-        $('#email-wrapper-correct').addClass('no-disp');
-        $('#email-wrapper-wrong').removeClass('no-disp');
-        $('.password-error-msg').removeClass('no-disp');
-      }
-    }
-  });
 
 </script>

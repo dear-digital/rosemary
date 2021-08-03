@@ -212,3 +212,119 @@ let act = document.querySelectorAll(".accordion.active");
         $('.shop-collection-right').removeClass('open');
         $('body').removeClass('no-scroll');
       });
+
+
+      function validateEmail(email) {
+        var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(email);
+      }
+
+      function hasNumber(myString) {
+        return /\d/.test(myString);
+      }
+
+      function onlyNumber(string) {
+        return /^\d+$/.test(string);
+      }
+
+      function validatePwd(pwd) {
+        var pwd_len = pwd.length;
+        if (pwd_len > 7) {
+          if(hasNumber(pwd)) {
+            if(/^[a-zA-Z0-9- ]*$/.test(pwd) == false) {
+              return true;
+            }
+          }
+        }
+      }
+
+      function validateName(string){
+        var string_len = string.length;
+        if (string_len > 0) {
+          if(!hasNumber(string)){
+            if(/^[a-zA-Z0-9- ]*$/.test(string) == true) {
+              return true;
+            }
+          }
+        }
+      }
+
+      function validateNumber(num) {
+        var num_len = num.length;
+        if (num_len > 0){
+          if(onlyNumber(num)) {
+            return true;
+          }
+        }
+      }
+
+      function validateStreet(string){
+        var string_len = string.length;
+        if (string_len > 0) {
+          if(/^[a-zA-Z0-9- ]*$/.test(string) == true) {
+            return true;
+          }
+        }
+      }
+
+      $('input').focusout(function() {
+        var type = $(this).attr('type');
+        var value = $(this).val();
+        var res = 'neutral';
+        if(type == 'email'){
+          if(validateEmail(value)) {
+            res = 'correct';
+            $('.email-error-msg').addClass('no-disp');
+          }
+          else {
+            res = 'wrong';
+            $('.email-error-msg').removeClass('no-disp');
+          }
+        }
+        else if(type == 'password') {
+          if(validatePwd(value)) {
+            res = 'correct';
+            $('.password-error-msg').addClass('no-disp');
+          }
+          else {
+            res = 'wrong';
+            $('.password-error-msg').removeClass('no-disp');
+          }
+        }
+        else if(type == 'text') {
+          var id = $(this).attr('id');
+          if(id == 'first-name' || id == 'name' || id == 'township'){
+            if(validateName(value)){
+              res = 'correct';
+            }
+            else{
+              res = 'wrong';
+            }
+          }
+          else if(id == 'street-name'){
+            if(validateStreet(value)){
+              res = 'correct';
+            }
+            else{
+              res = 'wrong';
+            }
+          }
+        }
+        else if (type == 'number'){
+            if(validateNumber(value)){
+              res = 'correct';
+            }
+            else{
+              res = 'wrong';
+            }
+
+        }
+        if(res == 'correct'){
+          $(this).next().next().addClass('no-disp');
+          $(this).next().removeClass('no-disp');
+        }
+        else if(res == 'wrong'){
+          $(this).next().addClass('no-disp');
+          $(this).next().next().removeClass('no-disp');
+        }
+      });
