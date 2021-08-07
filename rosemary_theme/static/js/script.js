@@ -328,3 +328,6 @@ let act = document.querySelectorAll(".accordion.active");
           $(this).next().next().removeClass('no-disp');
         }
       });
+
+
+      

@@ -124,6 +124,7 @@ body {
 margin: 0;
 font-family: var(--main-font);
 color: var(--main-color);
+overflow-x: hidden;
 }
 
 a {
@@ -238,7 +239,7 @@ display: flex;
   width: 42%;
   display: -webkit-box; display: -webkit-flex; display: flex;
   align-items: center;
-  background-color: var(--background-color);
+  background-color: rgba(241, 238, 237, 0.8);
   padding: 80px 40px;
   margin: 23px 0;
   border-radius: 0 8px 8px 0;
@@ -918,7 +919,7 @@ span.bike-line {
 }
 
 .home-page .how-it-works {
-  background-color: var(--background-light-color);
+  background-color: rgba(247, 250, 243, 0.8);
   padding-bottom: 104px;
   z-index: -1;
 }
@@ -1473,7 +1474,7 @@ span.bike-line {
 }
 
 .faq-section {
-    background-color: var(--background-light-color);
+    background-color: rgba(247, 250, 243, 0.8);
     padding: 80px 0;
     margin-bottom: 120px;
 }
@@ -1635,7 +1636,7 @@ span.bike-line {
 }
 
 .newsletter-signup-section {
-    background-color: var(--background-light-color);
+    background-color: rgba(247, 250, 243, 0.8);
     padding: 80px 0;
 }
 
@@ -3479,6 +3480,44 @@ margin-bottom: -60px;
 
 /*
 *****************************************************************************My-Account-End*****************************************************************************
+*/
+
+/*
+*****************************************************************************Background-Images-Start*****************************************************************************
+*/
+
+.bg-img {
+  position: absolute;
+  z-index: -1;
+}
+
+.bg-img-one, .bg-img-three {
+  left: -100px;
+}
+
+.bg-img-two, .bg-img-four {
+  right: -100px;
+}
+
+.bg-img-one {
+  top: 0;
+}
+
+.bg-img-two{
+  top: 1200px;
+}
+
+.bg-img-three{
+  top: 3500px;
+}
+
+.bg-img-four{
+  top: 4300px;
+}
+
+
+/*
+*****************************************************************************Background-Images-End*****************************************************************************
 */
 
 /*
