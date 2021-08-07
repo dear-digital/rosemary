@@ -1197,7 +1197,7 @@ span.bike-line {
 }
 
 .shop-collection-product-card .add-to-cart.unavailable{
-  background-color: var(--red-color);
+  background-color: var(--inactive-light-color);
 }
 
 .shop-collection-product-card .add-to-cart:hover {
@@ -1205,7 +1205,7 @@ span.bike-line {
 }
 
 .shop-collection-product-card .add-to-cart.unavailable:hover {
-  background-color: var(--red-color);
+  background-color: var(--inactive-light-color);
 }
 
 .shop-collection-product-card .add-to-cart svg {
